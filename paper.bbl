@@ -1,0 +1,132 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{berners2023semantic}
+Berners-Lee, T., Hendler, J., Lassila, O.: The semantic web: A new form of web
+  content that is meaningful to computers will unleash a revolution of new
+  possibilities. In: Linking the world’s information: essays on Tim
+  Berners-Lee’s invention of the World Wide Web, pp. 91--103 (2023)
+
+\bibitem{bizer2023linked}
+Bizer, C., Heath, T., Berners-Lee, T.: Linked data-the story so far. In:
+  Linking the world’s information: Essays on tim berners-lee’s invention of
+  the world wide web, pp. 115--143 (2023)
+
+\bibitem{bountouri2023semantic}
+Bountouri, L., Damigos, M., Drakiou, M., Gergatsoulis, M., Kalogeros, E.: The
+  semantic mapping of ric-cm to cidoc-crm. In: International Conference on
+  Asian Digital Libraries. pp. 90--99. Springer (2023)
+
+\bibitem{carroll2011comprehensive}
+Carroll, L., Farr, E., Hornsby, P., Ranker, B.: A comprehensive approach to
+  born-digital archives. Archivaria pp. 61--92 (2011)
+
+\bibitem{clavaud2023ric}
+Clavaud, F., Francart, T., Charbonnier, P.: Ric-o converter: a software to
+  convert eac-cpf and ead 2002 xml files to rdf datasets conforming to records
+  in contexts ontology. ACM Journal on Computing and Cultural Heritage
+  \textbf{16}(3),  1--13 (2023)
+
+\bibitem{clavaud2021ica}
+Clavaud, F., Wildi, T.: Ica records in contexts-ontology (ric-o): a semantic
+  framework for describing archival resources. In: Linked Archives 2021:
+  Proceedings of Linked Archives International Workshop 2021 co-located with
+  25th International Conference on Theory and Practice of Digital Libraries
+  (TPDL 2021). pp. p--79 (2021)
+
+\bibitem{coppens2015premis}
+Coppens, S., Verborgh, R., Peyrard, S., Ford, K., Creighton, T., Guenther, R.,
+  Mannens, E., Van~de Walle, R.: Premis owl: A semantic long-term preservation
+  model. International Journal on Digital Libraries  \textbf{15}(2),  87--101
+  (2015)
+
+\bibitem{dancy2024waiting}
+Dancy, R.: Waiting for ric: The release of records in contexts, version 1.0 1.
+  Archivaria (98),  166--191 (2024)
+
+\bibitem{di2016premis}
+Di~Iorio, A., Caron, B., et~al.: Premis 3.0 ontology: Improving semantic
+  interoperability of preservation metadata. iPres  (2016)
+
+\bibitem{dimitriou2025describing}
+Dimitriou, Y., Damigos, M., Kalogeros, E., Boueti, C.: Describing corfu
+  criminal court archives using ric-cm. Moderna arhivistika: {\v{c}}asopis
+  arhivske teorije in prakse  \textbf{8}(1),  93--112 (2025)
+
+\bibitem{donaldson2010implementing}
+Donaldson, D.R., Conway, P.: Implementing premis: a case study of the florida
+  digital archive. Library Hi Tech  \textbf{28}(2),  273--289 (2010)
+
+\bibitem{factor2009authenticity}
+Factor, M., Henis, E., Naor, D., Rabinovici-Cohen, S., Reshef, P., Ronen, S.,
+  Michetti, G., Guercio, M., et~al.: Authenticity and provenance in long term
+  digital preservation: Modeling and implementation in preservation aware
+  storage. In: Workshop on the Theory and Practice of Provenance. pp. 1--10.
+  San Francisco, CA (2009)
+
+\bibitem{gattuso2017preservation}
+Gattuso, J.: Preservation actions: Where we started and, where do we go from
+  here? Alexandria  \textbf{27}(2),  137--158 (2017)
+
+\bibitem{gueguen2013toward}
+Gueguen, G., da~Fonseca, V., Pitti, D., Grimo{\"u}ard, C.: Toward an
+  international conceptual model for archival description: a preliminary report
+  from the international council on archives' experts group on archival
+  description. The American Archivist  \textbf{76}(2),  567--584 (2013)
+
+\bibitem{hawkins2022archives}
+Hawkins, A.: Archives, linked data and the digital humanities: increasing
+  access to digitised and born-digital archives via the semantic web. Archival
+  Science  \textbf{22}(3),  319--344 (2022)
+
+\bibitem{RICCM}
+{International Council on Archives Expert Group on Archival Description
+  (ICA-EGAD)}: {Records in Contexts -- Conceptual Model (RiC-CM)}, version 1.0.
+  Tech. rep., International Council on Archives (2023)
+
+\bibitem{RiCO}
+{International Council on Archives Expert Group on Archival Description
+  (ICA-EGAD)}: Records in contexts -- ontology (ric-o), version 1.0. Tech.
+  rep., International Council on Archives (2023)
+
+\bibitem{jaillant2022can}
+Jaillant, L.: How can we make born-digital and digitised archives more
+  accessible? identifying obstacles and solutions. Archival Science
+  \textbf{22}(3),  417--436 (2022)
+
+\bibitem{kalfoglou2003ontology}
+Kalfoglou, Y., Schorlemmer, M.: Ontology mapping: the state of the art. The
+  knowledge engineering review  \textbf{18}(1),  1--31 (2003)
+
+\bibitem{liebermann2021born}
+Liebermann, Y.: Born digital: The black lives matter movement and memory after
+  the digital turn. Memory studies  \textbf{14}(4),  713--732 (2021)
+
+\bibitem{llanes2017records}
+Llanes-Padr{\'o}n, D., Pastor-S{\'a}nchez, J.A.: Records in contexts: the road
+  of archives to semantic interoperability. Program  \textbf{51}(4),  387--405
+  (2017)
+
+\bibitem{cardoso2024knowledge}
+Cardoso~de Oliveira, C., L{\"o}w, M.M., Bragato~Barros, T.H.: Knowledge
+  organization possibilities for archives: Comparative semantic analysis
+  between cidoc-crm and ric-cm. Knowledge Organization  \textbf{51}(5), ~362
+  (2024)
+
+\bibitem{premis_data_dictionary_2015}
+{PREMIS Editorial Committee}: PREMIS Data Dictionary for Preservation Metadata,
+  version 3.0 edn. (Nov 2015),
+  \url{https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf}
+
+\bibitem{ries2022digital}
+Ries, T.: Digital history and born-digital archives: The importance of forensic
+  methods. Journal of the British Academy  \textbf{10},  157--185 (2022)
+
+\bibitem{woodyard2007implementing}
+Woodyard-Robinson, D.: Implementing the premis data dictionary: a survey of
+  approaches. In: Library of Congress. Retrieved September. vol.~29, p.~2009
+  (2007)
+
+\end{thebibliography}
