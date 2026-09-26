@@ -63,13 +63,6 @@ Dimitriou, Y., Damigos, M., Kalogeros, E., Boueti, C.: Describing corfu
 Donaldson, D.R., Conway, P.: Implementing {PREMIS}: a case study of the florida
   digital archive. Library Hi Tech  \textbf{28}(2),  273--289 (2010)
 
-\bibitem{factor2009authenticity}
-Factor, M., Henis, E., Naor, D., Rabinovici-Cohen, S., Reshef, P., Ronen, S.,
-  Michetti, G., Guercio, M., et~al.: Authenticity and provenance in long term
-  digital preservation: Modeling and implementation in preservation aware
-  storage. In: Workshop on the Theory and Practice of Provenance. pp. 1--10.
-  San Francisco, CA (2009)
-
 \bibitem{feliciati2021archives}
 Feliciati, P.: Archives in a graph. the records in contexts ontology within the
   framework of standards and practices of archival description. {JLIS}. it, 12
@@ -78,8 +71,7 @@ Feliciati, P.: Archives in a graph. the records in contexts ontology within the
 \bibitem{formenton2022metadata}
 Formenton, D., Gracioso, L.d.S.: Metadata standards in web archiving
   technological resources for ensuring the digital preservation of archived
-  websites. RDBCI: Revista Digital de Biblioteconomia e Ci{\^e}ncia da
-  Informa{\c{c}}{\~a}o  \textbf{20},  e022001 (2022)
+  websites. {RDBCI}  \textbf{20},  e022001 (2022)
 
 \bibitem{gattuso2017preservation}
 Gattuso, J.: Preservation actions: Where we started and, where do we go from
@@ -101,7 +93,7 @@ Hawkins, A.: Archives, linked data and the digital humanities: increasing
 
 \bibitem{RiCO}
 {International Council on Archives Expert Group on Archival Description
-  (ICA-EGAD)}: Records in contexts -- ontology (ric-o), version 1.0. Tech.
+  (ICA-EGAD)}: {Records in Contexts -- Ontology (RiC-O), Version 1.0}. Tech.
   rep., International Council on Archives (2023)
 
 \bibitem{jaillant2022can}
@@ -163,15 +155,15 @@ Stephano, A.: A recontextualization of provenance: Records in contexts and the
 
 \bibitem{w3c_owl2_2012}
 {W3C}: {OWL 2 Web Ontology Language Overview}. W3c recommendation, World Wide
-  Web Consortium (W3C) (Dec 2012), \url{https://www.w3.org/TR/owl2-overview/}
+  Web Consortium (W3C) (2012)
 
 \bibitem{w3c_rdf11_2014}
 {W3C}: {RDF 1.1 Primer}. W3c interest group note, World Wide Web Consortium
-  (W3C) (Jun 2014), \url{https://www.w3.org/TR/rdf11-primer/}
+  (W3C) (2014)
 
 \bibitem{w3c_rdfs_2014}
 {W3C}: {RDF Schema 1.1 Specification}. W3c recommendation, World Wide Web
-  Consortium (W3C) (Feb 2014), \url{https://www.w3.org/TR/rdf-schema/}
+  Consortium (W3C) (2014)
 
 \bibitem{woodyard2007implementing}
 Woodyard-Robinson, D.: Implementing the {PREMIS} data dictionary: a survey of

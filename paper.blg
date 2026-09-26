@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
 Warning--missing publisher in berners2023semantic
 Warning--missing publisher in bizer2023linked
-You've used 36 entries,
+You've used 35 entries,
             2850 wiz_defined-function locations,
-            801 strings with 11326 characters,
-and the built_in function-call counts, 19509 in all, are:
-= -- 1624
-> -- 492
-< -- 43
-+ -- 211
-- -- 168
-* -- 1192
-:= -- 2433
-add.period$ -- 42
-call.type$ -- 36
-change.case$ -- 213
+            792 strings with 10772 characters,
+and the built_in function-call counts, 18499 in all, are:
+= -- 1540
+> -- 445
+< -- 42
++ -- 192
+- -- 150
+* -- 1108
+:= -- 2301
+add.period$ -- 39
+call.type$ -- 35
+change.case$ -- 200
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 1821
-empty$ -- 1818
-format.name$ -- 189
-if$ -- 4289
+cite$ -- 37
+duplicate$ -- 1738
+empty$ -- 1736
+format.name$ -- 170
+if$ -- 4074
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 348
-newline$ -- 114
-num.names$ -- 72
-pop$ -- 632
+int.to.str$ -- 35
+missing$ -- 332
+newline$ -- 111
+num.names$ -- 70
+pop$ -- 604
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 144
 quote$ -- 0
-skip$ -- 569
+skip$ -- 556
 stack$ -- 0
-substring$ -- 1170
-swap$ -- 1035
-text.length$ -- 43
+substring$ -- 1108
+swap$ -- 988
+text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
+type$ -- 138
 warning$ -- 2
-while$ -- 179
-width$ -- 38
-write$ -- 365
+while$ -- 173
+width$ -- 37
+write$ -- 351
 (There were 2 warnings)
