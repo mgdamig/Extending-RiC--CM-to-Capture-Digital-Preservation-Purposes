@@ -50,15 +50,18 @@
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
-\author{Evangelia Thanou\inst{1}\orcidID{0000-1111-2222-3333} \and
-Matthew Damigos\inst{1}\orcidID{1111-2222-3333-4444}}
+\author{Matthew Damigos\inst{1}\orcidID{0000-0003-0431-1482}\and 
+Lina Bountouri\inst{1}\orcidID{0009-0006-1050-022X}\and 
+Evangelia Thanou\inst{1}\and 
+Eleftherios Kalogeros\inst{1}\orcidID{0000-0001-8080-6343}
+}
 %
 \authorrunning{Thanou and }
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
 \institute{Laboratory of Digital Libraries and Electronic Publishing,\\ Department of Information Science, Ionian University, Corfu, Greece\\
-\email{\{abc,mgdamig\}@gmail.com}}
+\email{\{mgdamigos,alm.dimis2405,kalogero\}@ionio.gr}}
 %
 \maketitle              % typeset the header of the contribution
 %
@@ -142,45 +145,46 @@ Records in Contexts addresses the complementary problem of representing archival
 
 \section{Preliminaries}
 \label{sec:preliminaries}
-Ontologies provide formal vocabularies for representing concepts, properties, and relationships in a domain~\cite{gruber1993translation}. In the Semantic Web architecture, RDF represents information as subject-predicate-object triples, RDFS supports classes and hierarchies, and OWL provides richer logical constructs for equivalence, specialization, restrictions, and reasoning~\cite{w3c_rdf11_2014,w3c_rdfs_2014,w3c_owl2_2012}.
-% (W3C 2014a; W3C 2014b; W3C 2012). 
-These technologies matter for archival interoperability because mappings can be expressed explicitly and machine-processably. A semantic relation can therefore distinguish equivalence from specialization or documentation instead of treating two similarly named metadata fields as automatically identical.
-
-Ontology has its roots in philosophy, where it examines the meaning of existence as well as the very nature of beings. However, in computer science, especially in knowledge engineering, the term takes on a more technical character: ontology means a formal, explicitly formulated representation of a domain of knowledge. Gruber describes it simply as “an explicit specification of a conceptual representation”~\cite{gruber1993translation}. In other words, an ontology maps the basic concepts of a domain, defines the relationships between them, records their properties, and establishes the rules that govern them~\cite{antoniou_semantic_web_primer_2025}. Ontologies play a crucial role when different information systems need to collaborate. Thanks to a shared vocabularies and the clear organization of knowledge, a unified understanding of information becomes possible. They are used in many fields, such as artificial intelligence, knowledge systems, biomedical applications, information retrieval systems, IoT ecosystems, and in the knowledge graphs used by companies like Google and IBM.
-
-An ontology O is formally defined as the tuple $O=<C, R, I>$, where C is the set of Classes / Concepts, R is the set of Relations / Properties, I is the set of Individuals / Instances of classes in C. A class represents abstract groups, categories, or types of objects belonging to a domain (e.g., Person, Device, Process, Activity, Object). Individuals or instances typically describe the ground-level objects or tokens that populate the classes (e.g., $sensor_01$ as an instance of Device). In essence, when an object or entity is of a given class, we say that it is an instance of that class. A relation/property is a binary relationship that link two classes in C, together. Properties are divided into two types: Object properties (that link an instance of one class to an instance of another class - e.g., hasComponent) and Data properties (that link an instance of a class to a literal data value (e.g., hasAge a integer). To use multiple ontologies, one approach is to use a Bridge Ontology~\cite{kalfoglou2003ontology} which acts as a decoupled semantic mediation layer that imports the necessary namespaces of the underlying ontologies and defines alignment rules without refactoring the underlying ontologies.
+Ontologies provide formal vocabularies for representing concepts, properties, and relationships in a domain~\cite{gruber1993translation}. In other words, an ontology maps the basic concepts of a domain, defines the relationships between them, records their properties, and establishes the rules that govern them~\cite{antoniou_semantic_web_primer_2025}. Formally, an ontology O is defined as the tuple $O=<C, R, I>$, where C is the set of Classes / Concepts, R is the set of Relations / Properties, I is the set of Individuals / Instances of classes in C. 
+%A class represents abstract groups, categories, or types of objects belonging to a domain (e.g., Person, Device, Process, Activity, Object), instances describe the ground-level objects of the classes (e.g., $sensor_01$ as an instance of Device), and properties define directed relationships between either two classes in C (Object properties) or a class in C and a literal data value (Data properties). 
+To define ontologies in the Semantic Web context, RDF~\cite{w3c_rdf11_2014} represents information as subject-predicate-object triples, RDFS~\cite{w3c_rdfs_2014} supports classes and hierarchies, and OWL~\cite{w3c_owl2_2012} provides richer logical constructs for equivalence, specialization, restrictions, and reasoning. In the following, we use the RDF/RDFS properties
+\texttt{rdfs:subClassOf} and \texttt{rdf:type} (or its abbreviation \texttt{a}) to define class specialization
+and instance-level class membership, respectively, as well as the OWL
+properties \texttt{owl:equivalentClass} and \texttt{owl:sameAs} to define
+class-level semantic equivalence and instance-level identity, respectively.
+To use multiple ontologies, one approach is to use a Bridge Ontology~\cite{kalfoglou2003ontology} which acts as a decoupled semantic mediation layer that imports the necessary namespaces of the underlying ontologies and defines alignment rules without refactoring the underlying ontologies.
 
 
 \subsection{Records in Context - Conceptual Model and Ontology}
-The RiC-CM (Records in Contexts – Conceptual Model), developed by the International Council on Archives (ICA), seeks to integrate traditional archival description standards, such as ISAD(G), ISAAR(CPF), ISDF, and ISDIAH, within a unified conceptual framework~\cite{RICCM}. 
+The RiC-CM (Records in Contexts – Conceptual Model), developed by the International Council on Archives (ICA), seeks to integrate traditional archival description standards, such as ISAD(G), ISAAR(CPF), ISDF, and ISDIAH, within a unified conceptual framework~\cite{RICCM}. Unlike older hierarchical models, the RiC-CM is based on an entity-centric approach. Here, archival information is organized around entities, attributes, and relationships, enabling data interlinking in Semantic Web and Linked Open Data environments~\cite{RICCM}.  
 
-Unlike older hierarchical models, the RiC-CM is based on an entity-centric approach. Here, archival information is organized around entities, attributes, and relationships. Its basic idea is that records are not isolated entries, but rather parts of a broader contextual framework involving people, organizations, functions, events, and processes related to their creation, management, and use. This approach enables archival information to be represented in a more multidimensional way and paves the way for data interlinking in Semantic Web and Linked Open Data environments [ICA21]. 
+The basic entities of RiC-CM are the Record or Record Set, which corresponds to the archival record itself or a set of records (e.g., collections, fonds, series, folders). The Agent, is the person, organization, or group that creates, manages, or uses the records. Instantiations represent the physical or digital embodiments of Record Resources (the superclass of Record and Record Set). The Activity, which relates to activities or responsibilities and is directly linked to the creation of records and the Event, which includes actions and processes such as the creation, transfer, modification, or preservation of records. The model is complemented by entities such as Place and Date, which help to comprehensively capture the historical and functional context of the records. 
+%Figure~\ref{fig:ric-cm} depicts the main hierarchy of the RiC-CM classes. 
 
-The basic entities of RiC-CM are the Record or Record Set, which corresponds to the archival record itself or a set of records (e.g., collections, fonds, series, folders). The Agent, is the person, organization, or group that creates, manages, or uses the records. The Function, which relates to activities or responsibilities and is directly linked to the creation of records and the Event, which includes actions and processes such as the creation, transfer, modification, or preservation of records. The model is complemented by entities such as Place and Date, which help to comprehensively capture the historical and functional context of the records [ICA21]. Each entity is accompanied by specific attributes that provide detailed information about its characteristics. For example, the Agent entity includes attributes such as the agent’s identifier, name, type, dates of existence, and administrative or biographical history. Similarly, the Record entity has details such as the title, creation date, language, format, extent, level of description, and technical characteristics of the digital object. These attributes function as semantic units of information and enable the accurate documentation of archival resources [ICA21]. Figure~\ref{fig:ric-cm} depicts the main hierarchy of the RiC-CM classes.
+RiC-O~\cite{RiCO} is the OWL implementation of RiC-CM, providing a formal and machine-processable representation of its entities and relationships in RDF. 
+%It enables archival resources, agents, activities, events, dates, places, rules, and instantiations to be represented as interconnected graph structures, thereby supporting semantic interoperability, Linked Open Data publication, and cross-system querying of archival metadata. 
+Note that RiC-O~\cite{RiCO} is not a strict one-to-one translation of RiC-CM into OWL. While preserving the conceptual structure of RiC-CM, it introduces additional classes and properties required for an operational RDF/OWL representation, such as classes including \texttt{rico:Concept}, datatype properties for literal values, and object properties for linking entities. Moreover, some RiC-CM relations are represented in RiC-O both directly through object properties and, where richer description of the relation itself is required, through dedicated Relation classes.
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{PREMIS-ontology-RiC-CM.jpg}
-	\caption{RiC-CM - Class Hierarchy.} \label{fig:ric-cm}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{PREMIS-ontology-RiC-CM.jpg}
+%	\caption{RiC-CM - Class Hierarchy.} \label{fig:ric-cm}
+%\end{figure}
 
-In RiC-CM, relations (i.e., relationships between entities) are of particular importance, as they serve as the primary means by which entities are linked and the archival framework is represented. Relations are used to indicate, for example, that an Agent creates or manages a Record, that a Record documents a specific Function, or that an Event affects, changes, or transforms a Record. At the same time, relations allow different sets of records, entities, and events to be linked, resulting in the creation of a dynamic information network. This network captures not only the content but also the historical, administrative, and operational context of the records [ICA21]. In Figure 2, we can see the main relations defined by the RiC-CM between the classes.
 
 
 \subsection{PREMIS (Preservation Metadata: Implementation Strategies)}
 
 
-PREMIS is the best-known metadata standard for digital preservation. It was designed to support the long-term management and preservation of digital objects [PEC15]. The PREMIS Data Dictionary for Preservation Metadata provides a structured framework for recording technical, administrative, and management metadata related to the preservation of digital material. Many digital repositories, libraries, archives, and cultural heritage organizations implement it, resulting in a wide range of applications. Unlike general archival description models, PREMIS focuses exclusively on the needs of digital preservation, prioritizing the authenticity, integrity, accessibility, and long-term usability of digital objects [LAV14]. 
-
-The conceptual structure of PREMIS is based on four core entities: Object, Event, Agent, and Rights. Figure 3 illustrates the core PREMIS entities and show how they can be connected (through relationships) with each other. The Object entity refers to the digital object itself, which can be individual files, bitstreams, or even more complex digital objects. In particular, an Object could be either an Intellectual entity (representing the conceptual entity, e.g., specific book, software), a representation of an intellectual entity (e.g., a collection of image files, a pdf or e-pub document), and a file or a bitstream (representing mainly the physical object).  The Event entity is used to record every action or process that affects the digital object, such as migration, normalization, validation, replication, or integrity checking. The Agent describes the individuals, systems, or organizations that undertake or manage preservation activities. As for Rights, this is where the rights and permissions associated with preservation activities as well as access to digital objects are recorded [PEC15]. Each entity has its own specialized semantic units (i.e., attributes) that help accurately document the digital preservation process. For example, the Object entity includes attributes such as objectIdentifier, objectCategory, compositionLevel, fixity, size, format, and creatingApplication. Fixity is particularly valuable as it verifies integrity using checksums and hashing algorithms. Note here that PREMIS ontology is also extended through the Preservation Vocabulary\footnote{See \url{http://id.loc.gov/vocabulary/preservation}} provided by Library of Congress; e.g., the Event Type \texttt{creation} is defined as a subclass of the class \texttt{premis:Event}.
+PREMIS is a well-known metadata standard designed to support the long-term management and preservation of digital objects~\cite{premis_data_dictionary_2015}. It focuses exclusively on the needs of digital preservation, prioritizing the authenticity, integrity, accessibility, and long-term usability of digital objects. PREMIS model is given in multiple representations/serializations, such as XML Schema (for traditional structured records)  and OWL / RDF ontologies (for Linked Data implementations)~\cite{caron2018premis}. The conceptual structure of PREMIS is based on four core entities: Object, Event, Agent, and Rights. Figure~\ref{fig:premis} illustrates the classes of PREMIS 3 OWL ontology, as well as their subclass relations.
+Notice that PREMIS ontology has been defined in terms of other well-established ontologies such as PROV-O, FOAF and Dublin Core. PROV-O  is used to model provenance and execution history, while FOAF (Friend of a Friend)  is leveraged to represent human agents and organizations, and Dublin Core is mainly used to define Preservation Policies. Note here that PREMIS ontology is also extended through the Preservation Vocabulary\footnote{See \url{http://id.loc.gov/vocabulary/preservation}} provided by Library of Congress; e.g., the Event Type \texttt{creation} is defined as a subclass of the class \texttt{premis:Event}.
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{PREMIS-ontology.jpg}
 	\caption{Overview of PREMIS.} \label{fig:premis}
 \end{figure}
 
-The Event entity includes elements such as eventIdentifier, eventType, eventDateTime, eventOutcome, and eventDetail, allowing every preservation action and its results to be recorded in detail. The Agent has attributes such as agentIdentifier, agentName, and agentType. The Rights entity records permissions, restrictions, and permitted maintenance actions with properties such as rightsBasis, act, and restriction [PEC15]. Relationships between entities are a fundamental aspect of PREMIS, as they link objects, actions, and responsible entities within a comprehensive digital preservation framework. For example, an Event is linked to a specific Object, indicating that a migration or validation was applied to it. At the same time, an Agent is linked to the Event as the person responsible for performing that action, while the Rights entity determines whether the Agent has the right to perform actions such as copying, converting, or reproducing the digital object. Through these relationships, PREMIS creates a detailed information network that documents every stage of the digital object’s lifecycle [PEC15]; [LAV14]. 
 
-PREMIS model is given in multiple representations/serializations, such as XML Schema (for traditional structured records)  and OWL / RDF ontologies (for Linked Data implementations) . Figure~\ref{fig:premis} illustrates the classes of PREMIS ontology, as well as their subclass relations. Notice that PREMIS ontology has been defined in terms of other well-established ontologies such as PROV-O, FOAF and Dublin Core. PROV-O  is used to model provenance and execution history, while FOAF (Friend of a Friend)  is leveraged to represent human agents and organizations, and Dublin Core is mainly used to define Preservation Policies.
+
 
 
 \section{Bridging RiC-O and PREMIS: Semantic Alignment Framework}
@@ -208,45 +212,47 @@ In this work, we mainly handle semantic integration at the entity (class) level,
   In instance multi-typing, individual real-world nodes in the RDF graph hold dual class assertions, satisfying both archival and preservation models simultaneously. Table~\ref{tab:rico-premis-mapping} summarizes the finalized semantic alignment across all core entities, while the analysis of the alignment is further discussed into the following section.
  Note, here, that we also consider the OWL property \texttt{owl:sameAs} to specify instance-level equivalences, enabling the reconciliation of pre-existing, independent entities generated across distinct archival and preservation repositories. Such an approach ensures long-term extensibility as future iterations of PREMIS or RiC-O evolve.
 
-	\begin{table}[ht]
-		\begin{center}
-				\footnotesize
-				\begin{tabular}{l  l  c}
-						\hline\hline
-					\textbf{RiC-O Entity} & \textbf{PREMIS v3 Entity} & \textbf{Type of Relationship} \\
-					\hline\hline
-						\texttt{rico:Thing} & 	\texttt{premis:Object} & 	\texttt{rdfs:subClassOf} \\\hline
-						\texttt{rico:RecordResource} & \texttt{premis:IntellectualEntity} & Instance-level Multi-typing\\
-						 &  & (\texttt{rdf:type}) \\
-						\hline
-						\texttt{rico:Instantiation} & \texttt{premis:Representation} & Instance-level Multi-typing\\
-						&  & (\texttt{rdf:type}) \\\hline
-						\texttt{rico:Instantiation} & \texttt{premis:File} & Instance-level Multi-typing\\
-						&  & (\texttt{rdf:type}) \\\hline
-					\texttt{rico:Activity} & \texttt{premis:Event} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Identifier} & \texttt{premis:Identifier} & \texttt{owl:equivalentClass} \\\hline
-					\texttt{rico:ActivityType} & \texttt{premis:Action} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:CarrierType} & \texttt{premis:StorageMedium} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Agent} & \texttt{premis:Agent} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Person} & \texttt{premis:Person} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:CorporateBody} & \texttt{premis:Organization} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Mechanism} & \texttt{premis:SoftwareAgent} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Mechanism} & \texttt{premis:HardwareAgent} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Rule} & \texttt{premis:RightsBasis} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Rule} & \texttt{premis:PreservationPolicy} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Rule} & \texttt{premis:Rule} & \texttt{rdfs:subClassOf} \\\hline
-					\texttt{rico:Mandate} & \texttt{premis:Statute} & \texttt{rdfs:subClassOf} \\\hline
-					\hline
-				\end{tabular}
-		\end{center}
-			\caption{Semantic Alignment between RiC-O and PREMIS.}
-			\label{tab:rico-premis-mapping}
-		\end{table}
+	
 
 \subsection{Detailed Entity Relationship Analysis}
 \label{subsec:detailed-alignment}
 
 In the previous section, we presented the main entities relationships defined in the proposed bridge ontology (see Table~\ref{tab:rico-premis-mapping}). In this section, we analyse how we end up with these relationships and why the remaining PREMIS classes are not associated with any RiC-O entity. As mentioned in the previous section, RiC-O and PREMIS are domain ontologies aiming to describe information of two overlapping domains. Hence, expecting that the full list of classes of each ontology can map to the classes of the other ontology would be unrealistic and, more importantly, semantically undesirable. RiC-O primarily models archival records together with their provenance, context, agents, activities, rules, and instantiations, whereas PREMIS focuses on the operational requirements of digital preservation, including technical characteristics, preservation events, storage, dependencies, fixity, and preservation rights. The two ontologies therefore intersect only where archival description and digital preservation refer to sufficiently compatible conceptual entities; e.g., both ontologies provide concepts for events, agents, identifiers, although they conceptualize these entities at different levels of abstraction.  
+
+\begin{table}[ht]
+	\begin{center}
+		\scriptsize
+		\begin{tabular}{l  l  c}
+			\hline\hline
+			\textbf{RiC-O Entity} & \textbf{PREMIS v3 Entity} & \textbf{Type of Relationship} \\
+			\hline\hline
+			\texttt{rico:Thing} & 	\texttt{premis:Object} & 	\texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:RecordResource} & \texttt{premis:IntellectualEntity} & Instance-level Multi-typing\\
+			&  & (\texttt{rdf:type}) \\
+			\hline
+			\texttt{rico:Instantiation} & \texttt{premis:Representation} & Instance-level Multi-typing\\
+			&  & (\texttt{rdf:type}) \\\hline
+			\texttt{rico:Instantiation} & \texttt{premis:File} & Instance-level Multi-typing\\
+			&  & (\texttt{rdf:type}) \\\hline
+			\texttt{rico:Activity} & \texttt{premis:Event} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Identifier} & \texttt{premis:Identifier} & \texttt{owl:equivalentClass} \\\hline
+			\texttt{rico:ActivityType} & \texttt{premis:Action} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:CarrierType} & \texttt{premis:StorageMedium} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Agent} & \texttt{premis:Agent} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Person} & \texttt{premis:Person} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:CorporateBody} & \texttt{premis:Organization} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Mechanism} & \texttt{premis:SoftwareAgent} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Mechanism} & \texttt{premis:HardwareAgent} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Rule} & \texttt{premis:RightsBasis} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Rule} & \texttt{premis:PreservationPolicy} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Rule} & \texttt{premis:Rule} & \texttt{rdfs:subClassOf} \\\hline
+			\texttt{rico:Mandate} & \texttt{premis:Statute} & \texttt{rdfs:subClassOf} \\\hline
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Semantic Alignment between RiC-O and PREMIS.}
+	\label{tab:rico-premis-mapping}
+\end{table}
 
 \emph{Preservation objects and archival things.} Initially, we focus on mapping the class \texttt{premis:Object}. In PREMIS, the class Object describes objects managed within preservation environments and processes. For example, such objects could be archival digital records, such as a born-digital administrative decision, a digitized manuscript, or a preserved e-mail message, but also digital objects that do not constitute archival records, such as a software package, an emulation mechanism, or an auxiliary technical file maintained only to support preservation workflows. On the other hand, the class \texttt{rico:Thing} is defined as "any idea, material thing, or event within the realm of human experience"~\cite{RICCM}, which covers the objects defined using PREMIS, but not every instance of a \texttt{rico:Thing} is also a PREMIS object (e.g., instances of the classes Concept, Date or Place). Consequently, the bridge defines a subclass relationship, \texttt{premis:Object rdfs:subClassOf rico:Thing}, expressing that every PREMIS preservation object can also be interpreted as a RiC-O thing, while the inverse does not hold. This mapping therefore provides a general ontological anchor between the two models without implying semantic equivalence between their top-level concepts.
 

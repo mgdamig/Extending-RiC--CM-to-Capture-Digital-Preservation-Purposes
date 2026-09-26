@@ -30,17 +30,17 @@ Bountouri, L., Damigos, M., Drakiou, M., Gergatsoulis, M., Kalogeros, E.: The
 
 \bibitem{caron2018premis}
 Caron, B., Di~Iorio, A., Blair, C., Bountouri, L., Guenther, R., McLellan, E.,
-  Roke, E.R., Cowles, E.: Premis 3 owl ontology: Engaging sets of linked data.
-  In: iPRES 2018 (2018)
+  Roke, E.R., Cowles, E.: {PREMIS 3 OWL Ontology}: Engaging sets of linked
+  data. In: iPRES 2018 (2018)
 
 \bibitem{carroll2011comprehensive}
 Carroll, L., Farr, E., Hornsby, P., Ranker, B.: A comprehensive approach to
   born-digital archives. Archivaria pp. 61--92 (2011)
 
 \bibitem{clavaud2023ric}
-Clavaud, F., Francart, T., Charbonnier, P.: Ric-o converter: a software to
-  convert eac-cpf and ead 2002 xml files to rdf datasets conforming to records
-  in contexts ontology. ACM Journal on Computing and Cultural Heritage
+Clavaud, F., Francart, T., Charbonnier, P.: {RiC-O} converter: a software to
+  convert {EAC-CPF }and ead 2002 {XML} files to {RDF} datasets conforming to
+  records in contexts ontology. ACM Journal on Computing and Cultural Heritage
   \textbf{16}(3),  1--13 (2023)
 
 \bibitem{clavaud2021ica}
@@ -51,16 +51,16 @@ Clavaud, F., Wildi, T.: Ica records in contexts-ontology (ric-o): a semantic
   (TPDL 2021). pp. p--79 (2021)
 
 \bibitem{di2016premis}
-Di~Iorio, A., Caron, B., et~al.: Premis 3.0 ontology: Improving semantic
+Di~Iorio, A., Caron, B., et~al.: {PREMIS 3.0 Ontology}: Improving semantic
   interoperability of preservation metadata. iPres  (2016)
 
 \bibitem{dimitriou2025describing}
 Dimitriou, Y., Damigos, M., Kalogeros, E., Boueti, C.: Describing corfu
-  criminal court archives using ric-cm. Moderna arhivistika: {\v{c}}asopis
-  arhivske teorije in prakse  \textbf{8}(1),  93--112 (2025)
+  criminal court archives using ric-cm. Moderna arhivistika  \textbf{8}(1),
+  93--112 (2025)
 
 \bibitem{donaldson2010implementing}
-Donaldson, D.R., Conway, P.: Implementing premis: a case study of the florida
+Donaldson, D.R., Conway, P.: Implementing {PREMIS}: a case study of the florida
   digital archive. Library Hi Tech  \textbf{28}(2),  273--289 (2010)
 
 \bibitem{factor2009authenticity}
@@ -72,7 +72,7 @@ Factor, M., Henis, E., Naor, D., Rabinovici-Cohen, S., Reshef, P., Ronen, S.,
 
 \bibitem{feliciati2021archives}
 Feliciati, P.: Archives in a graph. the records in contexts ontology within the
-  framework of standards and practices of archival description. jlis. it, 12
+  framework of standards and practices of archival description. {JLIS}. it, 12
   (1), 92-101 (2021)
 
 \bibitem{formenton2022metadata}
@@ -114,8 +114,8 @@ Kalfoglou, Y., Schorlemmer, M.: Ontology mapping: the state of the art. The
   knowledge engineering review  \textbf{18}(1),  1--31 (2003)
 
 \bibitem{li2014provenance}
-Li, C., Sugimoto, S.: Provenance description of metadata using prov with premis
-  for long-term use of metadata. In: Proceedings of the International
+Li, C., Sugimoto, S.: Provenance description of metadata using {PROV} with
+  {PREMIS} for long-term use of metadata. In: Proceedings of the International
   Conference on Dublin Core and Metadata Applications. Dublin Core Metadata
   Initiative (2014)
 
@@ -129,9 +129,9 @@ Llanes-Padr{\'o}n, D., Pastor-S{\'a}nchez, J.A.: Records in contexts: the road
   (2017)
 
 \bibitem{mikhaylova2023extending}
-Mikhaylova, D., Metilli, D.: Extending ric-o to model historical architectural
-  archives: The itdt ontology. ACM Journal on Computing and Cultural Heritage
-  \textbf{16}(4),  1--15 (2023)
+Mikhaylova, D., Metilli, D.: Extending {RiC-O} to model historical
+  architectural archives: The itdt ontology. ACM Journal on Computing and
+  Cultural Heritage  \textbf{16}(4),  1--15 (2023)
 
 \bibitem{mosha2023metadata}
 Mosha, N.F., Ngulube, P.: Metadata standard for continuous preservation,
@@ -145,9 +145,8 @@ Murillo, A.P., Yoon, A.: A study of emerging trends in digital preservation
   (2021)
 
 \bibitem{premis_data_dictionary_2015}
-{PREMIS Editorial Committee}: PREMIS Data Dictionary for Preservation Metadata,
-  version 3.0 edn. (Nov 2015),
-  \url{https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf}
+{PREMIS Editorial Committee}: {PREMIS Data Dictionary for Preservation
+  Metadata}, version 3.0 edn. (Nov 2015)
 
 \bibitem{ries2022digital}
 Ries, T.: Digital history and born-digital archives: The importance of forensic
@@ -175,7 +174,7 @@ Stephano, A.: A recontextualization of provenance: Records in contexts and the
   Consortium (W3C) (Feb 2014), \url{https://www.w3.org/TR/rdf-schema/}
 
 \bibitem{woodyard2007implementing}
-Woodyard-Robinson, D.: Implementing the premis data dictionary: a survey of
+Woodyard-Robinson, D.: Implementing the {PREMIS} data dictionary: a survey of
   approaches. In: Library of Congress. Retrieved September. vol.~29, p.~2009
   (2007)
 
