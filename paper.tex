@@ -66,9 +66,8 @@ Eleftherios Kalogeros\inst{1}\orcidID{0000-0001-8080-6343}
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-
-
-
+	Digital archives require metadata models capable of representing both the archival context of records and the technical evidence necessary for their long-term preservation. RiC-O can be used to encode archival descriptions, while PREMIS provides detailed preservation metadata. These two models therefore address complementary dimensions of the same information environment. In this paper, we propose a lightweight bridge ontology that formalizes semantic relationships and class alignments between RiC-O and PREMIS v3, focusing on digital records and archives. The proposed framework combines class equivalence, specialization, and instance-level multi-typing without replacing PREMIS or refactoring RiC-O, preserving, in this way, the native semantics of both standards. 
+%	In this way, it preserves the native semantics of both standards while enabling the construction of a unified, machine-readable knowledge graph that supports querying across archival descriptions and technical preservation metadata.
 \keywords{RiC-O \and digital preservation \and PREMIS \and archival metadata.}
 \end{abstract}
 %
@@ -96,57 +95,20 @@ and Section~\ref{sec:conclusion} concludes the paper with directions for future 
 \label{sec:related-work}
 
 
-Recent research confirms that digital preservation increasingly depends on standardized metadata, provenance representation, and interoperability across heterogeneous information environments. Murillo and Yoon identify metadata, technological change, preservation strategies, and organizational issues among the recurring themes in contemporary digital-preservation literature \cite{murillo2021study}. Formenton and Gracioso emphasize the role of metadata standards in ensuring the persistence, intelligibility, access, and interoperability of archived Web resources, highlighting preservation metadata as an essential component of sustainable Web archiving \cite{formenton2022metadata}. From a provenance perspective, Bettivia et al. examine PREMIS alongside PROV and ProvONE, demonstrating that different provenance models address complementary preservation and workflow requirements rather than constituting interchangeable representations \cite{bettivia2022intersection}. Mosha and Ngulube similarly show, through a systematic review, that appropriate metadata standards are central to the continuous preservation, discovery, and reuse of research data \cite{mosha2023metadata}. 
-%More broadly, Raemy's recent work on Linked Open Usable Data for cultural heritage stresses that publishing cultural-heritage information as Linked Data is not sufficient in itself; effective integration also requires semantic interoperability among independently developed models and community practices \cite{raemy2024linked}. 
+Recent research confirms that digital preservation increasingly depends on standardized metadata, provenance representation, and interoperability across heterogeneous information environments. Murillo and Yoon identify metadata, technological change, preservation strategies, and organizational issues among the recurring themes in contemporary digital-preservation literature \cite{murillo2021study}. Formenton and Gracioso emphasize the role of metadata standards in ensuring the persistence, intelligibility, access, and interoperability of archived Web resources, highlighting preservation metadata as an essential component of sustainable Web archiving \cite{formenton2022metadata}. From a provenance perspective, Bettivia et al. examine PREMIS alongside PROV and ProvONE, demonstrating that different provenance models address complementary preservation and workflow requirements rather than constituting interchangeable representations \cite{bettivia2022intersection}. Mosha and Ngulube similarly show, through a systematic review, that appropriate metadata standards are central to the continuous preservation, discovery, and reuse of research data \cite{mosha2023metadata}.  
 These studies reinforce the need for preservation metadata,
-% to remain interoperable with broader contextual and descriptive models, 
 providing the motivation for explicitly relating PREMIS preservation semantics to the archival context represented by RiC-O.
 
 
-%Research related to this work can be divided into preservation-metadata models and semantic approaches to archival description. 
 PREMIS has become a central framework for documenting the information required to preserve digital objects~\cite{woodyard2007implementing}. Implementation studies have nevertheless shown that PREMIS is normally adapted to the requirements and architecture of particular repositories rather than deployed as a self-contained descriptive model \cite{donaldson2010implementing}. 
 The PREMIS 3 ontology initiative revised this representation according to Linked Data principles and the PREMIS 3 Data Dictionary \cite{di2016premis,caron2018premis}. PREMIS has also been semantically combined with complementary models; notably, Li and Sugimoto integrate PREMIS and PROV-O to represent provenance of both digital resources and metadata \cite{li2014provenance}. These studies demonstrate the feasibility of ontology-based preservation integration, but do not address archival contextual description through RiC-O.
-%, including objects, preservation events, agents, rights, technical characteristics, and provenance. Implementation studies have nevertheless shown that PREMIS is normally adapted to the requirements and architecture of particular repositories rather than deployed as a self-contained descriptive model \cite{woodyard2007implementing,donaldson2010implementing}. Subsequent work moved PREMIS toward Semantic Web technologies: Coppens et al. formalized PREMIS as an OWL model \cite{coppens2015premis}, while the PREMIS 3 ontology initiative revised this representation according to Linked Data principles and the PREMIS 3 Data Dictionary \cite{di2016premis,caron2018premis}. PREMIS has also been semantically combined with complementary models; notably, Li and Sugimoto integrate PREMIS and PROV-O to represent provenance of both digital resources and metadata \cite{li2014provenance}. These studies demonstrate the feasibility of ontology-based preservation integration, but do not address archival contextual description through RiC-O.
 
 Records in Contexts addresses the complementary problem of representing archival resources through rich networks of records, agents, activities, events, and other contextual entities. RiC-O realizes this model in RDF/OWL and supports graph-oriented archival description. Practical work includes the RiC-O Converter, which transforms EAD and EAC-CPF descriptions into RiC-O RDF datasets \cite{clavaud2023ric}, and applications of RiC to scientific correspondence and historical legal archives \cite{santos2023applying,dimitriou2025describing}. Recent research also demonstrates that RiC can support extension and semantic alignment: Mikhaylova and Metilli extend RiC-O with the ITDT ontology for architectural archives \cite{mikhaylova2023extending}, while Bountouri et al. map RiC-CM to CIDOC-CRM to improve interoperability between archival and cultural-heritage models \cite{bountouri2023semantic}. Recent analyses additionally emphasize RiC's graph-based and contextual reconceptualization of archival description and provenance \cite{feliciati2021archives,stephano2024recontextualization}.
 
-%These two research strands remain largely parallel. PREMIS provides preservation-specific technical and operational semantics, whereas RiC-O provides the archival and provenance context within which preserved digital records acquire evidential meaning. Although PREMIS has been integrated with other semantic models and RiC has been extended or mapped to other cultural-heritage ontologies, the literature examined here does not provide a systematic PREMIS-v3/RiC-O alignment for digital archives. This work addresses that gap through a lightweight bridge ontology that preserves the native models while expressing selected equivalence, specialization, and instance-level multi-typing relations between them.
-
-%The literature on semantic interoperability in archives increasingly treats archival models as knowledge representation frameworks rather than as fixed descriptive forms. RiC-CM responds to the limitations of traditional standards by representing records through entities and relationships and by supporting contextual networks \cite{gueguen2013toward,dancy2024waiting}.
-%The approach has also been examined in relation to CIDOC CRM, demonstrating that conceptual correspondences can support interoperability across cultural heritage systems \cite{bountouri2023semantic,cardoso2024knowledge}.
-%
-%Such work is important for the present study because it shows that RiC-CM can participate in mappings across models without requiring a single vocabulary to replace all others.
-%
-%RiC-O further strengthens this potential by implementing RiC-CM through Semantic Web technologies. Clavaud and Wildi's work demonstrated the role of RiC-O in Linked Open Data \cite{clavaud2021ica}, while the RiC-O Converter~\cite{clavaud2023ric} showed that existing EAD and EAC-CPF descriptions can be transformed into RDF datasets compatible with RiC-O.
-%
-%Applications of RiC to concrete archival collections (e.g., \cite{dimitriou2025describing}) have also shown its capacity to model complex relationships between records, agents, activities, and historical contexts. These developments suggest that RiC is suitable as a semantic backbone for archival information, including specialized extensions.
-%
-%PREMIS~\cite{premis_data_dictionary_2015,donaldson2010implementing,di2016premis,woodyard2007implementing,coppens2015premis} addresses a different layer of the information environment. Its Data Dictionary defines preservation metadata required to maintain digital objects over time, including technical characteristics, preservation events, agents, rights, and integrity information \cite{premis_data_dictionary_2015}.
-%
-%Practical implementation studies have shown the usefulness of PREMIS for tracking preservation processes, while PREMIS OWL has extended the standard toward semantic representation \cite{coppens2015premis}.
-%
-%The development of semantic representations is especially relevant because both RiC-O and PREMIS can be discussed within an RDF/OWL environment rather than only as independent XML or database structures.
-%
-%The evolution toward semantic archival representation has highlighted the critical need to bridge context-oriented archival models with specialized digital preservation standards. On one hand, the RiC-O ontology excels at modeling archival provenance, agents, activities, and complex contextual networks \cite{gueguen2013toward, dancy2024waiting}. On the other hand, it falls short in capturing the fine-grained technical properties essential for long-term digital preservation, such as bit-level data integrity, format validation, storage location details, and technological dependency chains.
-%
-%Integrating the PREMIS standard \cite{premis_data_dictionary_2015} into RiC-O introduces major semantic challenges rooted in differences in abstraction, granularity, and core functional objectives:
-%
-%\begin{itemize}
-%	
-%	\item \textbf{Structural Mismatches in Operational Entities:} Aligning operational PREMIS entities with RiC-O requires reconciling distinct domain paradigms. For example, mapping a PREMIS Event (e.g., format migration, checksum validation) to \texttt{ric:Activity} or \texttt{ric:Event}, as well as mapping a PREMIS Agent (which includes software applications and hardware environments) to \texttt{ric:Agent}, requires balancing granular preservation tasks with broader archival context. Furthermore, linking PREMIS Intellectual Entities and Objects to \texttt{ric:RecordResource} or \texttt{ric:Instantiation} demands a strict distinction between abstract conceptual entities and their concrete physical or digital manifestations \cite{premis_data_dictionary_2015, di2016premis}.
-%	
-%	\item \textbf{Native Absences of Technical Preservation Primitives:} Standard RiC-O structures are not natively designed to support core technical preservation primitives \cite{corrado2017digital}. Vital mechanisms that guarantee evidential value and authenticity over time—such as fixity specifications through cryptographic hashing algorithms, preservation RightsStatement entities, format registries, and software/hardware dependency graphs—remain either missing or underdeveloped within general archival ontologies.
-%	
-%\end{itemize}
-%
-%To resolve these limitations without diluting the core philosophy of either standard, targeted ontological extensions are necessary \cite{corrado2017digital}. Directly embedding PREMIS 3.0 elements, specifically fixity attributes, environmental dependency chains, legal preservation constraints, and operational event provenance, into the RiC-O graph structure yields a unified conceptual model that successfully guarantees both archival context and technical authenticity over the long term \cite{coppens2015premis,di2016premis}.
-%
-%The literature nevertheless leaves an integration gap. Existing research has examined archival interoperability, PREMIS implementation, and semantic representations separately, but the thesis underlying this paper identifies no established systematic mapping that combines RiC-O's contextual expressiveness with PREMIS's preservation specificity. This gap motivates a mapping based on semantic function and a targeted extension rather than a wholesale redesign of RiC-CM.
 
 \section{Preliminaries}
 \label{sec:preliminaries}
 Ontologies provide formal vocabularies for representing concepts, properties, and relationships in a domain~\cite{gruber1993translation}. In other words, an ontology maps the basic concepts of a domain, defines the relationships between them, records their properties, and establishes the rules that govern them~\cite{antoniou_semantic_web_primer_2025}. Formally, an ontology O is defined as the tuple $O=<C, R, I>$, where C is the set of Classes / Concepts, R is the set of Relations / Properties, I is the set of Individuals / Instances of classes in C. 
-%A class represents abstract groups, categories, or types of objects belonging to a domain (e.g., Person, Device, Process, Activity, Object), instances describe the ground-level objects of the classes (e.g., $sensor_01$ as an instance of Device), and properties define directed relationships between either two classes in C (Object properties) or a class in C and a literal data value (Data properties). 
 To define ontologies in the Semantic Web context, RDF~\cite{w3c_rdf11_2014} represents information as subject-predicate-object triples, RDFS~\cite{w3c_rdfs_2014} supports classes and hierarchies, and OWL~\cite{w3c_owl2_2012} provides richer logical constructs for equivalence, specialization, restrictions, and reasoning. In the following, we use the RDF/RDFS properties
 \texttt{rdfs:subClassOf} and \texttt{rdf:type} (or its abbreviation \texttt{a}) to define class specialization
 and instance-level class membership, respectively, as well as the OWL
@@ -159,29 +121,22 @@ To use multiple ontologies, one approach is to use a Bridge Ontology~\cite{kalfo
 The RiC-CM (Records in Contexts – Conceptual Model), developed by the International Council on Archives (ICA), seeks to integrate traditional archival description standards, such as ISAD(G), ISAAR(CPF), ISDF, and ISDIAH, within a unified conceptual framework~\cite{RICCM}. Unlike older hierarchical models, the RiC-CM is based on an entity-centric approach. Here, archival information is organized around entities, attributes, and relationships, enabling data interlinking in Semantic Web and Linked Open Data environments~\cite{RICCM}.  
 
 The basic entities of RiC-CM are the Record or Record Set, which corresponds to the archival record itself or a set of records (e.g., collections, fonds, series, folders). The Agent, is the person, organization, or group that creates, manages, or uses the records. Instantiations represent the physical or digital embodiments of Record Resources (the superclass of Record and Record Set). The Activity, which relates to activities or responsibilities and is directly linked to the creation of records and the Event, which includes actions and processes such as the creation, transfer, modification, or preservation of records. The model is complemented by entities such as Place and Date, which help to comprehensively capture the historical and functional context of the records. 
-%Figure~\ref{fig:ric-cm} depicts the main hierarchy of the RiC-CM classes. 
 
 RiC-O~\cite{RiCO} is the OWL implementation of RiC-CM, providing a formal and machine-processable representation of its entities and relationships in RDF. 
-%It enables archival resources, agents, activities, events, dates, places, rules, and instantiations to be represented as interconnected graph structures, thereby supporting semantic interoperability, Linked Open Data publication, and cross-system querying of archival metadata. 
 Note that RiC-O~\cite{RiCO} is not a strict one-to-one translation of RiC-CM into OWL. While preserving the conceptual structure of RiC-CM, it introduces additional classes and properties required for an operational RDF/OWL representation, such as classes including \texttt{rico:Concept}, datatype properties for literal values, and object properties for linking entities. Moreover, some RiC-CM relations are represented in RiC-O both directly through object properties and, where richer description of the relation itself is required, through dedicated Relation classes.
-
-%\begin{figure}
-%	\includegraphics[width=\textwidth]{PREMIS-ontology-RiC-CM.jpg}
-%	\caption{RiC-CM - Class Hierarchy.} \label{fig:ric-cm}
-%\end{figure}
-
 
 
 \subsection{PREMIS (Preservation Metadata: Implementation Strategies)}
 
 
-PREMIS is a well-known metadata standard designed to support the long-term management and preservation of digital objects~\cite{premis_data_dictionary_2015}. It focuses exclusively on the needs of digital preservation, prioritizing the authenticity, integrity, accessibility, and long-term usability of digital objects. PREMIS model is given in multiple representations/serializations, such as XML Schema (for traditional structured records)  and OWL / RDF ontologies (for Linked Data implementations)~\cite{caron2018premis}. The conceptual structure of PREMIS is based on four core entities: Object, Event, Agent, and Rights. Figure~\ref{fig:premis} illustrates the classes of PREMIS 3 OWL ontology, as well as their subclass relations.
+PREMIS is a well-known metadata standard designed to support the long-term management and preservation of digital objects~\cite{premis_data_dictionary_2015}. It focuses exclusively on the needs of digital preservation, prioritizing the authenticity, integrity, accessibility, and long-term usability of digital objects. PREMIS model is given in multiple representations/serializations, such as XML Schema (for traditional structured records)  and OWL / RDF ontologies (for Linked Data implementations)~\cite{caron2018premis}. The conceptual structure of PREMIS is based on four core entities: Object, Event, Agent, and Rights. 
+%Figure~\ref{fig:premis} illustrates the classes of PREMIS 3 OWL ontology, as well as their subclass relations.
 Notice that PREMIS ontology has been defined in terms of other well-established ontologies such as PROV-O, FOAF and Dublin Core. PROV-O  is used to model provenance and execution history, while FOAF (Friend of a Friend)  is leveraged to represent human agents and organizations, and Dublin Core is mainly used to define Preservation Policies. Note here that PREMIS ontology is also extended through the Preservation Vocabulary\footnote{See \url{http://id.loc.gov/vocabulary/preservation}} provided by Library of Congress; e.g., the Event Type \texttt{creation} is defined as a subclass of the class \texttt{premis:Event}.
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{PREMIS-ontology.jpg}
-	\caption{Overview of PREMIS.} \label{fig:premis}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{PREMIS-ontology.jpg}
+%	\caption{Overview of PREMIS.} \label{fig:premis}
+%\end{figure}
 
 
 
@@ -310,10 +265,6 @@ PREMIS classes are defined as subclasses of \texttt{rico:Mechanism}. For
 example, the software used to perform the migration in Figure~\ref{fig:example}
 can be represented as: \texttt{brg:LibreOffice\_v7.5 a premis:SoftwareAgent}.
 %
-%\begin{rdfexpressions}
-%	brg:LibreOffice\_v7.5 & a & premis:SoftwareAgent .
-%\end{rdfexpressions}
-%
 Through the bridge, the same instance is also inferred to be a
 \texttt{rico:Mechanism}, thus allowing the preservation software to participate
 in the archival description of the migration activity.
@@ -322,36 +273,6 @@ in the archival description of the migration activity.
 The two ontologies also provide concepts for describing the medium on which
 information is stored and the identifiers assigned to entities. RiC-O class \texttt{rico:CarrierType} covers the all the storage mediums, hence, we define \texttt{premis:StorageMedium} as its subclass. Furthermore, the class Identifier is defined in both ontologies and their semantics completely match; hence, we define an equivalence relationship between them.
 
-%In PREMIS,
-%\texttt{premis:StorageMedium} is used to characterize the physical medium
-%supporting the storage of digital objects; e.g., a magnetic disk, an SSD, or an
-%LTO tape. RiC-O models the corresponding notion at a more general level through
-%\texttt{rico:CarrierType}, which characterizes the type of carrier on which an
-%instantiation is inscribed. A PREMIS storage medium can therefore be considered
-%a specific type of RiC-O carrier, while a RiC-O carrier type is not necessarily
-%a storage medium used within a digital preservation environment. Consequently,
-%the bridge defines the specialization relation
-%\texttt{premis:StorageMedium rdfs:subClassOf rico:CarrierType}. For example,
-%if \texttt{brg:StorageMedium\_01} represents the LTO tape on which the preserved
-%version of \texttt{infra\_funding.docx} is stored, the same entity can also be
-%interpreted as a RiC-O carrier type.
-%
-%Identifiers constitute a different case, since their semantics in the two
-%ontologies are sufficiently close to support a stronger relationship. Both
-%\texttt{premis:Identifier} and \texttt{rico:Identifier} represent an
-%identifier as an entity used to identify another entity rather than merely as
-%an unstructured literal value. We therefore define the relation
-%
-%\begin{rdfexpressions}
-%	premis:Identifier & owl:equivalentClass & rico:Identifier .
-%\end{rdfexpressions}
-%
-%For example, an identifier assigned to
-%\texttt{brg:Infra\_2008\_412} can consequently be used through either ontology
-%without creating two different identifier instances. Unlike the
-%\texttt{StorageMedium}--\texttt{CarrierType} mapping, no specialization is
-%required here, since the two classes play the same semantic role in the context
-%of the proposed bridge.
 
 \emph{Rules, rights bases, and preservation policies.} Analyzing how both ontologies model the rules and mandates, we identify overlaps. In particular, PREMIS provides several classes for expressing the
 normative context under which preservation actions are performed, including
@@ -359,12 +280,6 @@ Rights Basis, Preservation Policy, and Rule. In RiC-O, the broader class \texttt
 to represent principles, regulations, policies, or other rules governing the
 performance of activities. Hence, the three PREMIS classes can be regarded as
 preservation-specific kinds of RiC-O rules, and the bridge defines the subclass relationships as described in Table~\ref{tab:rico-premis-mapping}.
-%
-%\begin{rdfexpressions}
-%	premis:RightsBasis        & rdfs:subClassOf & rico:Rule . \\
-%	premis:PreservationPolicy & rdfs:subClassOf & rico:Rule . \\
-%	premis:Rule               & rdfs:subClassOf & rico:Rule .
-%\end{rdfexpressions}
 %
 For example, a repository policy requiring records stored in obsolete formats
 to be migrated to currently supported formats can be represented as a
@@ -391,29 +306,20 @@ The remaining PREMIS classes are deliberately left without a corresponding
 RiC-O class. This does not indicate that these concepts are irrelevant to
 archival description, but rather that no RiC-O entity provides a sufficiently
 close semantic counterpart to justify a class-level alignment. 
-%Several of these
-%classes describe preservation-specific technical characteristics, such as
-%\texttt{premis:Fixity}, \texttt{premis:Signature},
-%\texttt{premis:Dependency}, \texttt{premis:EnvironmentCharacteristic},
-%\texttt{premis:StorageLocation}, \texttt{premis:SignificantProperties}, and
-%\texttt{premis:Inhibitor}. For example, a fixity instance may contain evidence
-%used to verify the integrity of an archival file, but the fixity information is
-%not itself an archival entity for which RiC-O provides an equivalent class.
-%Similarly, a technological dependency may be essential for rendering a
-%preserved object without constituting a RiC-O entity of the same semantic
-%nature. Other PREMIS classes, such as \texttt{premis:Bitstream}, represent a
-%level of technical granularity for which forcing a correspondence with a
-%broader RiC-O class would introduce semantics not supported by either model.
-%Consequently, these concepts remain expressed natively in PREMIS and can be
-%linked through properties to the mapped entities where necessary. This
-%selective approach follows the main principle of the proposed bridge: mappings
-%are introduced only where a sufficiently precise semantic correspondence can
-%be established, rather than attempting to translate the complete PREMIS model
-%into RiC-O.
+
 
 \section{Conclusion \& Future work}
 \label{sec:conclusion}
+This paper presented a lightweight semantic alignment framework between RiC-O and PREMIS v3 for digital archives. The two ontologies address complementary aspects of the same information environment.
+%: RiC-O primarily represents archival records together with their provenance and contextual relationships, whereas PREMIS focuses on the operational requirements of digital preservation, including technical characteristics, preservation events, storage, dependencies, fixity, and rights. 
+Rather than modifying either source ontology, the proposed bridge defines selected class-level equivalence and specialization relationships and uses instance-level multi-typing where the semantic scopes of the corresponding classes do not fully coincide. This approach preserves the native semantics of both standards while enabling archival description and preservation metadata to coexist within a unified RDF graph.
 
+The current work mainly addresses semantic integration at the entity level. Future work will therefore focus on extending the bridge to a systematic alignment of RiC-O and PREMIS properties.
+%, including preservation-event relationships, technical characteristics, rights, dependencies, and fixity information. 
+Further work will also include the formal implementation and publication of the bridge ontology
+%, validation through competency questions and reasoning, 
+and evaluation on larger real-world digital archival datasets. Finally, the framework should be examined against future versions of RiC-O and PREMIS.
+% in order to assess its maintainability and long-term extensibility.
 % ---- Bibliography ----
 %
 % BibTeX users should specify bibliography style 'splncs04'.
