@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.5.11)  17 SEP 2026 08:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.5.11)  26 SEP 2026 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,20 +198,20 @@ File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
 ) (paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 (/Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/install/tex/context
 /base/mkii/supp-pdf.mkii
@@ -239,14 +239,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 40.
+(Font)              <7> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 40.
+(Font)              <5> on input line 63.
 
 Title too long for running head. Please supply
 a shorter form with \titlerunning prior to \maketitle
 
-Overfull \hbox (3.08728pt too wide) in paragraph at lines 46--47
+Overfull \hbox (3.08728pt too wide) in paragraph at lines 69--70
 []\T1/cmr/bx/n/9 Keywords:\T1/cmr/m/n/9 RiC-O \TS1/cmr/m/n/9 ^^b7 \T1/cmr/m/n/9
  dig-i-tal preser-va-tion \TS1/cmr/m/n/9 ^^b7 \T1/cmr/m/n/9 PREMIS \TS1/cmr/m/n
 /9 ^^b7 \T1/cmr/m/n/9 archival
@@ -259,49 +259,28 @@ Overfull \hbox (3.08728pt too wide) in paragraph at lines 46--47
 {/Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdft
 ex/pdftex.map}]
 
-LaTeX Warning: Reference `sec:extension' on page 2 undefined on input line 77.
-
-
-LaTeX Warning: Reference `sec:conclusion' on page 2 undefined on input line 79.
-
-
-
-Overfull \hbox (0.18054pt too wide) in paragraph at lines 85--90
-\T1/cmr/m/n/10 The lit-er-a-ture on se-man-tic in-ter-op-er-abil-ity in archive
-s in-creas-ingly treats archival
- []
-
-
-
 [2]
 
 [3]
-
-LaTeX Warning: Citation `ICA23cm' on page 4 undefined on input line 114.
-
-
 
 [4]
 <PREMIS-ontology-RiC-CM.jpg, id=26, 5425.26875pt x 2865.70625pt>
 File: PREMIS-ontology-RiC-CM.jpg Graphic file (type jpg)
 <use PREMIS-ontology-RiC-CM.jpg>
-Package pdftex.def Info: PREMIS-ontology-RiC-CM.jpg  used on input line 121.
+Package pdftex.def Info: PREMIS-ontology-RiC-CM.jpg  used on input line 162.
 (pdftex.def)             Requested size: 347.12354pt x 183.34773pt.
 
 
 [5 <./PREMIS-ontology-RiC-CM.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 136.
+(Font)              <9> on input line 174.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 136.
+(Font)              <6> on input line 174.
 <PREMIS-ontology.jpg, id=30, 5375.08125pt x 3367.58125pt>
 File: PREMIS-ontology.jpg Graphic file (type jpg)
 <use PREMIS-ontology.jpg>
-Package pdftex.def Info: PREMIS-ontology.jpg  used on input line 139.
+Package pdftex.def Info: PREMIS-ontology.jpg  used on input line 177.
 (pdftex.def)             Requested size: 347.12354pt x 217.46169pt.
-
-Underfull \vbox (badness 2073) has occurred while \output is active []
-
 
 
 [6]
@@ -310,134 +289,80 @@ Underfull \vbox (badness 2073) has occurred while \output is active []
 <PREMIS-ontology-example.jpg, id=41, 4260.91875pt x 1636.1125pt>
 File: PREMIS-ontology-example.jpg Graphic file (type jpg)
 <use PREMIS-ontology-example.jpg>
-Package pdftex.def Info: PREMIS-ontology-example.jpg  used on input line 224.
+Package pdftex.def Info: PREMIS-ontology-example.jpg  used on input line 199.
 (pdftex.def)             Requested size: 347.12354pt x 133.28831pt.
 
 
 [8 <./PREMIS-ontology-example.jpg>]
 
-LaTeX Warning: Citation `bibid' on page 9 undefined on input line 242.
-
-
-Overfull \hbox (34.06116pt too wide) in paragraph at lines 289--290
-\T1/cmr/m/n/10 stance such as a dig-i-tal manuscript ren-der-ing (\T1/cmtt/m/n/
-10 ex:Rep_001 a premis:Representation,
- []
-
-
-Overfull \hbox (1.48578pt too wide) in paragraph at lines 289--290
-\T1/cmr/m/n/10 across both de-scrip-tive and preser-va-tion do-mains. At the fi
-le level, a \T1/cmtt/m/n/10 premis:File
- []
-
-
-Overfull \hbox (30.58978pt too wide) in paragraph at lines 289--290
-\T1/cmr/m/n/10 rep-re-sents an or-dered se-quence of bytes, cor-re-spond-ing to
- \T1/cmtt/m/n/10 rico:SingleLogicalCarrier
- []
-
-
-Overfull \hbox (12.7608pt too wide) in paragraph at lines 289--290
-\T1/cmr/m/n/10 typing (\T1/cmtt/m/n/10 ex:master.tif a premis:File, rico:Single
-LogicalCarrier\T1/cmr/m/n/10 ) pre-vents
- []
-
-
-
 [9]
-Overfull \hbox (6.7345pt too wide) in paragraph at lines 291--292
-\T1/cmtt/m/n/10 rdfs:subClassOf \T1/cmr/m/n/10 to \T1/cmtt/m/n/10 rico:Activity
-Type\T1/cmr/m/n/10 . For in-stance, as-sign-ing \T1/cmtt/m/n/10 premis:Action
- []
-
-
 
 [10]
-Overfull \hbox (11.7044pt too wide) in paragraph at lines 293--294
-\T1/cmr/m/n/10 LTO tape or solid-state ar-ray. Map-ping \T1/cmtt/m/n/10 premis:
-StorageMedium rdfs:subClassOf
- []
-
-
-Overfull \hbox (12.31647pt too wide) in paragraph at lines 293--294
-\T1/cmtt/m/n/10 rdfs:subClassOf rico:Agent\T1/cmr/m/n/10 , \T1/cmtt/m/n/10 prem
-is:Person rdfs:subClassOf rico:Person\T1/cmr/m/n/10 ,
- []
-
-
-Overfull \hbox (13.09406pt too wide) in paragraph at lines 293--294
-\T1/cmr/m/n/10 and \T1/cmtt/m/n/10 premis:Organization rdfs:subClassOf rico:Cor
-porateBody\T1/cmr/m/n/10 ) en-sures that
- []
-
-
-Overfull \hbox (48.25214pt too wide) in paragraph at lines 295--296
-\T1/cmr/m/n/10 en-sures that statu-tory preser-va-tion obli-ga-tions, such as l
-e-gal de-posit acts (\T1/cmtt/m/n/10 ex:Statute_2024
- []
-
-(paper.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [11]
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 119--122
+[12] (paper.bbl
+
+[13]
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 []\T1/cmr/m/n/9 PREMIS Ed-i-to-rial Com-mit-tee: PREMIS Data Dic-tio-nary
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--122
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 \T1/cmr/m/n/9 for Preser-va-tion Meta-data, ver-sion 3.0 edn. (Nov 2015),
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 166--168
+[]\T1/cmr/m/n/9 W3C: OWL 2 Web On-tol-ogy Lan-guage Overview. W3c rec-om-men-da
+-tion,
  []
 
 )
 
-[13] (paper.aux)
+[15] (paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 2083 strings out of 469946
- 32525 string characters out of 5458941
+ 2101 strings out of 469946
+ 32923 string characters out of 5458941
  439183 words of memory out of 5000000
- 28901 multiletter control sequences out of 15000+600000
- 637308 words of font info for 59 fonts, out of 8000000 for 9000
+ 28918 multiletter control sequences out of 15000+600000
+ 637994 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,65p,1921b,313s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,65p,2080b,312s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/lj
-four/jknappen/ec/dpi600/ecrm0600.pk> </Users/mgdamigos/Library/Application Supp
-ort/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk> </Users/
+four/jknappen/ec/dpi600/ecti1000.pk> </Users/mgdamigos/Library/Application Supp
+ort/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0600.pk> </Users/
 mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknapp
-en/ec/dpi600/ecrm0700.pk> </Users/mgdamigos/Library/Application Support/MiKTeX/
-texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk> </Users/mgdamigos/L
+en/ec/dpi600/ectt1000.pk> </Users/mgdamigos/Library/Application Support/MiKTeX/
+texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0700.pk> </Users/mgdamigos/L
 ibrary/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
-0/ecbx1200.pk> </Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data
-/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk> </Users/mgdamigos/Library/Appl
-ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0900.
+0/ecbx1000.pk> </Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data
+/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk> </Users/mgdamigos/Library/Appl
+ication Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.
 pk> </Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
-jfour/jknappen/ec/dpi600/ectt0900.pk> </Users/mgdamigos/Library/Application Sup
-port/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm0900.pk> </Users
+jfour/jknappen/ec/dpi600/ecbx0900.pk> </Users/mgdamigos/Library/Application Sup
+port/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ectt0900.pk> </Users
 /mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknap
-pen/ec/dpi600/ecrm1000.pk> </Users/mgdamigos/Library/Application Support/MiKTeX
-/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk></Users/mgdamigos/L
-ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/install
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/mgdamigos/Library/Application
- Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/
-mgdamigos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb>
-Output written on paper.pdf (13 pages, 2633352 bytes).
+pen/ec/dpi600/ecrm0900.pk> </Users/mgdamigos/Library/Application Support/MiKTeX
+/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk> </Users/mgdamigos/
+Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi6
+00/ecbx1440.pk></Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/inst
+all/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/mgdamigos/Library/Applica
+tion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></U
+sers/mgdamigos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></Users/mgdamigos/Library/Application Support/MiKTeX/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on paper.pdf (15 pages, 2699114 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
+ 570 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

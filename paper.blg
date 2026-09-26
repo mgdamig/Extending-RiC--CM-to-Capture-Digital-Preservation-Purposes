@@ -5,54 +5,47 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: splncs04.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Repeated entry---line 332 of file bibliography.bib
- : @inproceedings{clavaud2021ica
- :                              ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ICA23cm"
-Warning--I didn't find a database entry for "bibid"
 Warning--missing publisher in berners2023semantic
 Warning--missing publisher in bizer2023linked
-Warning--there's a number but no volume in dancy2024waiting
-You've used 25 entries,
+You've used 36 entries,
             2850 wiz_defined-function locations,
-            753 strings with 9693 characters,
-and the built_in function-call counts, 14434 in all, are:
-= -- 1210
-> -- 385
-< -- 35
-+ -- 162
-- -- 134
-* -- 902
-:= -- 1792
-add.period$ -- 30
-call.type$ -- 25
-change.case$ -- 154
+            802 strings with 11402 characters,
+and the built_in function-call counts, 19515 in all, are:
+= -- 1625
+> -- 492
+< -- 43
++ -- 211
+- -- 168
+* -- 1195
+:= -- 2434
+add.period$ -- 42
+call.type$ -- 36
+change.case$ -- 213
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 1321
-empty$ -- 1305
-format.name$ -- 149
-if$ -- 3171
+cite$ -- 38
+duplicate$ -- 1821
+empty$ -- 1818
+format.name$ -- 189
+if$ -- 4290
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 255
-newline$ -- 81
-num.names$ -- 50
-pop$ -- 449
+int.to.str$ -- 36
+missing$ -- 348
+newline$ -- 114
+num.names$ -- 72
+pop$ -- 631
 preamble$ -- 1
-purify$ -- 115
+purify$ -- 154
 quote$ -- 0
-skip$ -- 430
+skip$ -- 569
 stack$ -- 0
-substring$ -- 886
-swap$ -- 783
-text.length$ -- 35
+substring$ -- 1170
+swap$ -- 1035
+text.length$ -- 43
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
-warning$ -- 3
-while$ -- 135
-width$ -- 27
-write$ -- 256
-(There was 1 error message)
+type$ -- 142
+warning$ -- 2
+while$ -- 179
+width$ -- 38
+write$ -- 366
+(There were 2 warnings)
