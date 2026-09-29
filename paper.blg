@@ -5,47 +5,50 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: splncs04.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Warning--missing publisher in berners2023semantic
+Repeated entry---line 529 of file bibliography.bib
+ : @book{hendler2020semantic
+ :                          ,
+I'm skipping whatever remains of this entry
 Warning--missing publisher in bizer2023linked
-You've used 35 entries,
+You've used 27 entries,
             2850 wiz_defined-function locations,
-            792 strings with 10772 characters,
-and the built_in function-call counts, 18499 in all, are:
-= -- 1540
-> -- 445
-< -- 42
-+ -- 192
-- -- 150
-* -- 1108
-:= -- 2301
-add.period$ -- 39
-call.type$ -- 35
-change.case$ -- 200
+            757 strings with 9644 characters,
+and the built_in function-call counts, 14686 in all, are:
+= -- 1218
+> -- 374
+< -- 34
++ -- 160
+- -- 128
+* -- 897
+:= -- 1827
+add.period$ -- 32
+call.type$ -- 27
+change.case$ -- 159
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 1738
-empty$ -- 1736
-format.name$ -- 170
-if$ -- 4074
+cite$ -- 28
+duplicate$ -- 1372
+empty$ -- 1371
+format.name$ -- 147
+if$ -- 3236
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 332
-newline$ -- 111
-num.names$ -- 70
-pop$ -- 604
+int.to.str$ -- 27
+missing$ -- 264
+newline$ -- 87
+num.names$ -- 54
+pop$ -- 477
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 117
 quote$ -- 0
-skip$ -- 556
+skip$ -- 434
 stack$ -- 0
-substring$ -- 1108
-swap$ -- 988
-text.length$ -- 42
+substring$ -- 855
+swap$ -- 785
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
-warning$ -- 2
-while$ -- 173
-width$ -- 37
-write$ -- 351
-(There were 2 warnings)
+type$ -- 104
+warning$ -- 1
+while$ -- 134
+width$ -- 29
+write$ -- 273
+(There was 1 error message)
