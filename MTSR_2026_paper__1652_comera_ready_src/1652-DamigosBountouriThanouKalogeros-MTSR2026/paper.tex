@@ -208,7 +208,17 @@ The property \texttt{owl:sameAs} may reconcile independently described resources
 \subsection{Detailed Entity Relationship Analysis}
 \label{subsec:detailed-alignment}
 
-In the previous section, we presented the main entities relationships defined in the proposed bridge ontology (see Table~\ref{tab:rico-premis-mapping}). In this section, we analyse how we end up with these relationships and why the remaining PREMIS classes are not associated with any RiC-O entity. As mentioned in the previous section, RiC-O and PREMIS are domain ontologies aiming to describe information of two overlapping domains. As a result, expecting that the full list of classes of each ontology can map to the classes of the other ontology would be unrealistic and, more importantly, semantically undesirable. RiC-O primarily models archival records, their provenance, context, agents, activities, rules, and instantiations, whereas PREMIS focuses on the operational requirements of digital preservation, including technical characteristics, preservation events, storage, dependencies, fixity, and preservation rights. Therefore, two ontologies intersect only where archival description and digital preservation refer to sufficiently compatible conceptual entities; e.g., both ontologies provide concepts for events, agents, identifiers, although they conceptualize these entities at different levels of abstraction.  
+%In the previous section, we presented the main entities relationships defined in the proposed bridge ontology (see Table~\ref{tab:rico-premis-mapping}). In this section, we analyse how we end up with these relationships and why the remaining PREMIS classes are not associated with any RiC-O entity. As mentioned in the previous section, RiC-O and PREMIS are domain ontologies aiming to describe information of two overlapping domains. As a result, expecting that the full list of classes of each ontology can map to the classes of the other ontology would be unrealistic and, more importantly, semantically undesirable. RiC-O primarily models archival records, their provenance, context, agents, activities, rules, and instantiations, whereas PREMIS focuses on the operational requirements of digital preservation, including technical characteristics, preservation events, storage, dependencies, fixity, and preservation rights. Therefore, two ontologies intersect only where archival description and digital preservation refer to sufficiently compatible conceptual entities; e.g., both ontologies provide concepts for events, agents, identifiers, although they conceptualize these entities at different levels of abstraction.  
+
+This section justifies the correspondences summarized in
+Table~\ref{tab:rico-premis-mapping}, following the alignment
+criteria introduced above. Since RiC-O models archival context
+while PREMIS focuses on digital preservation, their conceptual
+scopes overlap only partially. Consequently, mappings are
+proposed only where the corresponding class semantics are
+sufficiently compatible; PREMIS classes without suitable
+RiC-O counterparts remain unmapped.
+
 
 
 \emph{Preservation objects and archival things.} Initially, we focus on mapping the class \texttt{premis:Object}. In PREMIS, the class Object describes objects managed within preservation environments and processes. For example, such objects could be digital archives, such as a born-digital administrative decision, a digitized manuscript, or a preserved e-mail message, but also digital objects that do not constitute archival records, such as a software package, an emulation mechanism, or an auxiliary technical file maintained only to support preservation workflows. On the other hand, the class \texttt{rico:Thing} is defined as "any idea, material thing, or event within the realm of human experience"~\cite{RICCM}, which covers the objects defined using PREMIS, but not every instance of a \texttt{rico:Thing} is also a PREMIS object (e.g., instances of the classes Concept, Date or Place). Consequently, the bridge defines a subclass relationship, \texttt{premis:Object rdfs:subClassOf rico:Thing}, expressing that every PREMIS preservation object can also be interpreted as a RiC-O thing, while the inverse does not hold. This mapping therefore provides a general ontological anchor between the two models without implying semantic equivalence between their top-level concepts.
@@ -430,10 +440,20 @@ as a \texttt{rico:Mechanism}.
 %and evaluation on larger real-world digital archival datasets. Finally, the framework should be examined against future versions of RiC-O and PREMIS. 
 %----
 %--NEW--
-This paper proposed a lightweight entity-level alignment between RiC-O and PREMIS v3 for digital archives. Selected class correspondences and conditional multi-typing support the integration of archival context and preservation metadata, as illustrated through a digital archival scenario. The framework remains a proposed alignment rather than a fully implemented and validated bridge ontology. Future work includes systematic property alignment, formal implementation, 
-%consistency checking, 
-and evaluation using real archival datasets.
-Furthermore, formal consistency checking and evaluation of inferred classifications against the combined ontologies remain necessary steps toward a fully implemented bridge ontology.
+%This paper proposed a lightweight entity-level alignment between RiC-O and PREMIS v3 for digital archives. Selected class correspondences and conditional multi-typing support the integration of archival context and preservation metadata, as illustrated through a digital archival scenario. The framework remains a proposed alignment rather than a fully implemented and validated bridge ontology. Future work includes systematic property alignment, formal implementation, 
+%%consistency checking, 
+%and evaluation using real archival datasets.
+%Furthermore, formal consistency checking and evaluation of inferred classifications against the combined ontologies remain necessary steps toward a fully implemented bridge ontology.
+This paper proposed a lightweight entity-level alignment
+between RiC-O and PREMIS v3 for digital archives.
+Selected class correspondences and conditional multi-typing
+support the integration of archival context and preservation
+metadata, as illustrated through a digital archival scenario.
+The framework remains a proposed alignment rather than
+a fully implemented and validated bridge ontology.
+Future work includes property alignment, formal implementation,
+consistency and inference checking, and evaluation using
+real archival datasets. Furthermore, formal consistency checking and evaluation of inferred classifications against the combined ontologies remain necessary steps toward a fully implemented bridge ontology.
 %--NEW--
 % in order to assess its maintainability and long-term extensibility.
 % ---- Bibliography ----
@@ -441,6 +461,16 @@ Furthermore, formal consistency checking and evaluation of inferred classificati
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
+\begin{credits}
+	\subsubsection{\ackname}
+	This research was supported by the project ``Activities of the Laboratory on Digital
+	Libraries and Electronic Publishing of the Department of Archives, Library Science
+	and Museology''.
+%This work was supported by the project
+%``Activities of the Laboratory on Digital Libraries and
+%Electronic Publishing of the Department of Archives,
+%Library Science and Museology''.
+\end{credits}
  \bibliographystyle{splncs04}
  \bibliography{bibliography}
 

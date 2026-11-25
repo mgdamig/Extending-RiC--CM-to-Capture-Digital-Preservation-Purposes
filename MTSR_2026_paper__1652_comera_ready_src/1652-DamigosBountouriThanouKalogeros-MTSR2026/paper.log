@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.11.23)  24 NOV 2026 20:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.11.23)  25 NOV 2026 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,23 +290,32 @@ Underfull \vbox (badness 7740) has occurred while \output is active []
 
 
 [6 <./PREMIS-ontology-example.jpg>]
+Underfull \vbox (badness 5711) has occurred while \output is active []
+
+
 
 [7]
 
 [8]
-Overfull \hbox (3.84521pt too wide) in paragraph at lines 318--329
+Overfull \hbox (3.84521pt too wide) in paragraph at lines 328--339
 \T1/cmr/m/n/10 Con-se-quently, both PREMIS classes are de-fined as sub-classes 
 of \T1/cmtt/m/n/10 rico:Mechanism\T1/cmr/m/n/10 .
  []
 
 
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+
 
 [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [10] (paper.bbl
+Overfull \hbox (5.63304pt too wide) in paragraph at lines 466--1
+\T1/cmr/m/n/9 Lab-o-ra-tory on Dig-i-tal Li-braries and Elec-tronic Pub-lish-in
+g of the De-part-ment of Archives,
+ []
+
+
 
 [11])
 
@@ -317,13 +326,13 @@ L3 programming layer <2026-09-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2106 strings out of 467313
- 33527 string characters out of 5392228
- 462692 words of memory out of 5000000
- 31552 multiletter control sequences out of 15000+600000
+ 2108 strings out of 467313
+ 33729 string characters out of 5392228
+ 459692 words of memory out of 5000000
+ 31554 multiletter control sequences out of 15000+600000
  640752 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,1435b,333s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,1435b,401s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/lj
 four/jknappen/ec/dpi525/ectt0800.pk> </Users/mgdamigos/Library/Application Supp
 ort/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0700.pk> </Users/
@@ -351,9 +360,9 @@ gos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb></Users/mgdamigos/Library/Application Support/MiKTeX/texmfs/ins
 tall/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/mgdamigos/Library/Applicat
 ion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on paper.pdf (12 pages, 943420 bytes).
+Output written on paper.pdf (12 pages, 944478 bytes).
 PDF statistics:
- 648 PDF objects out of 1000 (max. 8388607)
+ 653 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
