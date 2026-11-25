@@ -1,0 +1,138 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{antoniou_semantic_web_primer_2025}
+Antoniou, G., Groth, P., van Harmelen, F., Hoekstra, R.: A Semantic Web Primer.
+  MIT Press, 3rd edn. (2025)
+
+\bibitem{bettivia2022intersection}
+Bettivia, R., Cheng, Y.Y., Gryk, M.R.: At the intersection of provenance and
+  metadata. In: Documenting the Future: Navigating Provenance Metadata
+  Standards, pp.~1--9. Springer (2022)
+
+\bibitem{bizer2023linked}
+Bizer, C., Heath, T., Berners-Lee, T.: Linked data-the story so far. In:
+  Linking the world’s information: Essays on tim berners-lee’s invention of
+  the world wide web, pp. 115--143 (2023)
+
+\bibitem{bountouri2023semantic}
+Bountouri, L., Damigos, M., Drakiou, M., Gergatsoulis, M., Kalogeros, E.: The
+  semantic mapping of ric-cm to cidoc-crm. In: ICADL. pp. 90--99. Springer
+  (2023)
+
+\bibitem{caron2018premis}
+Caron, B., Di~Iorio, A., Blair, C., Bountouri, L., Guenther, R., McLellan, E.,
+  Roke, E.R., Cowles, E.: {PREMIS 3 OWL Ontology}: Engaging sets of linked
+  data. In: iPRES 2018 (2018)
+
+\bibitem{clavaud2023ric}
+Clavaud, F., Francart, T., Charbonnier, P.: {RiC-O} converter: a software to
+  convert {EAC-CPF }and ead 2002 {XML} files to {RDF} datasets conforming to
+  records in contexts ontology. ACM Journal on Computing and Cultural Heritage
+  \textbf{16}(3),  1--13 (2023)
+
+\bibitem{clavaud2021ica}
+Clavaud, F., Wildi, T.: Ica records in contexts-ontology (ric-o): a semantic
+  framework for describing archival resources. In: Linked Archives 2021:
+  Proceedings of Linked Archives International Workshop 2021 co-located with
+  25th International Conference on Theory and Practice of Digital Libraries
+  (TPDL 2021). pp. p--79 (2021)
+
+\bibitem{di2016premis}
+Di~Iorio, A., Caron, B., et~al.: {PREMIS 3.0 Ontology}: Improving semantic
+  interoperability of preservation metadata. iPres  (2016)
+
+\bibitem{dimitriou2025describing}
+Dimitriou, Y., Damigos, M., Kalogeros, E., Boueti, C.: Describing corfu
+  criminal court archives using ric-cm. Moderna arhivistika  \textbf{8}(1),
+  93--112 (2025)
+
+\bibitem{donaldson2010implementing}
+Donaldson, D.R., Conway, P.: Implementing {PREMIS}: a case study of the florida
+  digital archive. Library Hi Tech  \textbf{28}(2),  273--289 (2010)
+
+\bibitem{formenton2022metadata}
+Formenton, D., Gracioso, L.d.S.: Metadata standards in web archiving
+  technological resources for ensuring the digital preservation of archived
+  websites. {RDBCI}  \textbf{20},  e022001 (2022)
+
+\bibitem{gattuso2017preservation}
+Gattuso, J.: Preservation actions: Where we started and, where do we go from
+  here? Alexandria  \textbf{27}(2),  137--158 (2017)
+
+\bibitem{gruber1993translation}
+Gruber, T.R.: A translation approach to portable ontology specifications.
+  Knowledge acquisition  \textbf{5}(2),  199--220 (1993)
+
+\bibitem{hawkins2022archives}
+Hawkins, A.: Archives, linked data and the digital humanities: increasing
+  access to digitised and born-digital archives via the semantic web. Archival
+  Science  \textbf{22}(3),  319--344 (2022)
+
+\bibitem{hendler2020semantic}
+Hendler, J., Gandon, F., Allemang, D.: Semantic web for the working ontologist:
+  Effective modeling for linked data, {RDFS}, and {OWL}. Morgan \& Claypool
+  (2020)
+
+\bibitem{RICCM}
+{International Council on Archives Expert Group on Archival Description
+  (ICA-EGAD)}: {Records in Contexts -- Conceptual Model (RiC-CM)}, version 1.0.
+  Tech. rep., International Council on Archives (2023)
+
+\bibitem{RiCO}
+{International Council on Archives Expert Group on Archival Description
+  (ICA-EGAD)}: {Records in Contexts -- Ontology (RiC-O), Version 1.0}. Tech.
+  rep., International Council on Archives (2023)
+
+\bibitem{kalfoglou2003ontology}
+Kalfoglou, Y., Schorlemmer, M.: Ontology mapping: the state of the art. The
+  knowledge engineering review  \textbf{18}(1),  1--31 (2003)
+
+\bibitem{li2014provenance}
+Li, C., Sugimoto, S.: Provenance description of metadata using {PROV} with
+  {PREMIS} for long-term use of metadata. In: Proceedings of the International
+  Conference on Dublin Core and Metadata Applications. Dublin Core Metadata
+  Initiative (2014)
+
+\bibitem{llanes2017records}
+Llanes-Padr{\'o}n, D., Pastor-S{\'a}nchez, J.A.: Records in contexts: the road
+  of archives to semantic interoperability. Program  \textbf{51}(4),  387--405
+  (2017)
+
+\bibitem{mikhaylova2023extending}
+Mikhaylova, D., Metilli, D.: Extending {RiC-O} to model historical
+  architectural archives: The itdt ontology. ACM Journal on Computing and
+  Cultural Heritage  \textbf{16}(4),  1--15 (2023)
+
+\bibitem{mosha2023metadata}
+Mosha, N.F., Ngulube, P.: Metadata standard for continuous preservation,
+  discovery, and reuse of research data in repositories by higher education
+  institutions: A systematic review. Information  \textbf{14}(8), ~427 (2023)
+
+\bibitem{murillo2021study}
+Murillo, A.P., Yoon, A.: A study of emerging trends in digital preservation
+  literature: An analysis of journal articles presented in course syllabi.
+  Journal of Librarianship and Information Science  \textbf{53}(4),  615--629
+  (2021)
+
+\bibitem{premis_data_dictionary_2015}
+{PREMIS Editorial Committee}: {PREMIS Data Dictionary for Preservation
+  Metadata}, version 3.0 edn. (Nov 2015)
+
+\bibitem{santos2023applying}
+Santos, C., Revez, J.: Applying records in contexts in portugal: the case of
+  the scientific correspondence from ant{\'o}nio de barros machado and dora
+  lustig archive. Archival Science  \textbf{23}(2),  137--158 (2023)
+
+\bibitem{stephano2024recontextualization}
+Stephano, A.: A recontextualization of provenance: Records in contexts and the
+  principle of provenance. Archival Science  \textbf{24}(4),  783--800 (2024)
+
+\bibitem{woodyard2007implementing}
+Woodyard-Robinson, D.: Implementing the {PREMIS} data dictionary: a survey of
+  approaches. In: Library of Congress. Retrieved September. vol.~29, p.~2009
+  (2007)
+
+\end{thebibliography}

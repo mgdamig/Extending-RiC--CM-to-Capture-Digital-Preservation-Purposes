@@ -46,7 +46,7 @@
 %
 \title{Bridging RiC-O and PREMIS: An Alignment Framework for Digital Archives}
 %
-%\titlerunning{Abbreviated paper title}
+\titlerunning{Bridging RiC-O and PREMIS}
 % If the paper title is too long for the running head, you can set
 % an abbreviated paper title here
 %
@@ -56,7 +56,7 @@ Evangelia Thanou\inst{1}\and
 Eleftherios Kalogeros\inst{1}\orcidID{0000-0001-8080-6343}
 }
 %
-\authorrunning{Thanou and }
+\authorrunning{Damigos et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
@@ -90,7 +90,13 @@ On the other hand, the PREMIS Data Dictionary for Preservation Metadata~\cite{pr
 When focusing on archives of digital records, the two models, RiC and PREMIS, consequently address complementary dimensions of the same information environment, where RiC emphasizes archival context, while PREMIS emphasizes preservation management. This constitutes the main problem addressed by this paper. In particular, this paper focuses on examining how to leverage the semantic expressiveness of Linked Data (specifically, RiC-O) alongside the operational preservation granularity of PREMIS to create a unified, machine-readable knowledge graph.  If archival description and preservation metadata remain isolated, a repository may know that a record exists and who created it, while storing preservation events and technical evidence elsewhere without a direct semantic bridge. Conversely, a preservation system may record a checksum, migration, or software dependency without representing the archival context that gives the preserved object evidential meaning.
 
 To address this limitation, in this paper, we propose a lightweight bridge ontology that formalizes semantic relationships and class alignments between RiC-O and PREMIS v3, focusing on digital records and archives.  
-Our approach provides a formal, machine-processable bridge without replacing PREMIS or refactoring RiC-O, also specifying  instance-level, multi-typing relationships between certain core structural entities. This approach preserves the native semantics of both domain standards, while enabling the implementation of a unified Knowledge Graph, allowing querying across archival descriptions and technical preservation metadata, as validated through concrete digital repository scenarios.
+Our approach provides a formal, machine-processable bridge without replacing PREMIS or refactoring RiC-O, also specifying  instance-level, multi-typing relationships between certain core structural entities. This approach preserves the native semantics of both domain standards, while enabling the implementation of a unified Knowledge Graph, allowing querying across archival descriptions and technical preservation metadata,
+%----OLD----
+% as validated through concrete digital repository scenarios.
+ %--------
+ %----NEW----
+ as illustrated through a representative digital archival scenario.
+ %--------
 The rest of this paper is organized as follows: Section~\ref{sec:related-work} reviews the related work. Section~\ref{sec:preliminaries} provides the necessary formal background on OWL ontologies, RiC-CM/RiC-O, and PREMIS v3. 
 Section~\ref{sec:alignment-framework} details the proposed extension and bridging architecture,
 and Section~\ref{sec:conclusion} concludes the paper.
@@ -165,22 +171,39 @@ Consider a born-digital record issued on 2008-10-14, by the Ministry of Interior
 To represent the aforementioned example through an RDF data graph, we depict a representative subset of this graph in Figure~\ref{fig:example}.
 The white-colored nodes represent instances of RiC-O classes, the orange-colored nodes represent instances of PREMIS classes, and the dual-colored nodes
 represent multi-typed entities, described later in this section. Through this example, we can easily see that  
-bridging both ontologies is essential, because while RiC-O captures the description of the records and treats the migration log itself as a newly documented record (\texttt{migration\_logs}), PREMIS provides the detailed technical evidence of the migration, and only their alignment guarantees that the modern \texttt{.docx} file remains  authentic to its 2008 \texttt{.doc} origin.
-
+bridging both ontologies is essential, because while RiC-O captures the description of the records and treats the migration log itself as a newly documented record (\texttt{migration\_logs}), PREMIS provides the detailed technical evidence of the migration, and 
+%----OLD----
+%only their alignment guarantees that the modern \texttt{.docx} file remains  authentic to its 2008 \texttt{.doc} origin.
+%--------
+%----NEW----
+their alignment connects archival context with preservation evidence, supporting traceability and authenticity assessment without guaranteeing authenticity.
+%--------
 \begin{figure}
 	\includegraphics[width=\textwidth]{PREMIS-ontology-example.jpg}
 	\caption{Example - PREMIS \& RiC-O.} \label{fig:example}
 \end{figure}
 
-To address this challenge, we focus on digital archives and records and present an alignment framework between RiC-O and PREMIS ontologies. One could think that such an alignment framework is given by directly modifying the source ontologies or asserting global class subsumptions across all core structural concepts. However, such an approach creates risks including ontological noise and unwanted inferential side effects (taking into account that PREMIS covers broader digital preservation domains beyond traditional archives), as well as compromises the maintainability of the unified model.
-In this work, we handle semantic integration at the entity (class) level, leaving the exhaustive property alignment for future work. In particular, we propose a mapping of PREMIS classes to RiC-O ones and analyze its validity. Our alignment methodology relies on defining such a mapping through a lightweight, specialized Bridge Ontology.
-
- The proposed bridge is defined by focusing on how PREMIS classes are aligned with RiC-O entities (not aligning all the RiC-O classes with PREMIS ones). 
-  The resulting framework focus on the context of digital records and archives and on relationships of three main categories: (1) \textit{Direct Class Equivalence} (\texttt{owl:equivalentClass}) where concepts share identical semantic boundaries, (2) \textit{Domain Specialization} (\texttt{rdfs:subClassOf}) where a PREMIS entity represents a specialized subset of a broader RiC-O concept, and (3) \textit{Instance-Level Multi-Typing} (\texttt{rdf:type}) for achieving entity reconciliation across structural instances via instance-level multi-typing.
-  In instance multi-typing, individual real-world nodes in the RDF graph hold dual class assertions, satisfying both archival and preservation models simultaneously. Table~\ref{tab:rico-premis-mapping} summarizes the finalized semantic alignment across all core entities, while the analysis of the alignment is further discussed in the following section.
-It's worthy of note that we also consider the OWL property \texttt{owl:sameAs} to specify instance-level equivalences, enabling the reconciliation of pre-existing, independent entities generated across distinct archival and preservation repositories. This approach ensures long-term extensibility as future iterations of PREMIS or RiC-O evolve.
-
-	
+%----OLD----
+%To address this challenge, we focus on digital archives and records and present an alignment framework between RiC-O and PREMIS ontologies. One could think that such an alignment framework is given by directly modifying the source ontologies or asserting global class subsumptions across all core structural concepts. However, such an approach creates risks including ontological noise and unwanted inferential side effects (taking into account that PREMIS covers broader digital preservation domains beyond traditional archives), as well as compromises the maintainability of the unified model.
+%In this work, we handle semantic integration at the entity (class) level, leaving the exhaustive property alignment for future work. In particular, we propose a mapping of PREMIS classes to RiC-O ones and analyze its validity. Our alignment methodology relies on defining such a mapping through a lightweight, specialized Bridge Ontology.
+%
+% The proposed bridge is defined by focusing on how PREMIS classes are aligned with RiC-O entities (not aligning all the RiC-O classes with PREMIS ones). 
+%  The resulting framework focus on the context of digital records and archives and on relationships of three main categories: (1) \textit{Direct Class Equivalence} (\texttt{owl:equivalentClass}) where concepts share identical semantic boundaries, (2) \textit{Domain Specialization} (\texttt{rdfs:subClassOf}) where a PREMIS entity represents a specialized subset of a broader RiC-O concept, and (3) \textit{Instance-Level Multi-Typing} (\texttt{rdf:type}) for achieving entity reconciliation across structural instances via instance-level multi-typing.
+%  In instance multi-typing, individual real-world nodes in the RDF graph hold dual class assertions, satisfying both archival and preservation models simultaneously. Table~\ref{tab:rico-premis-mapping} summarizes the finalized semantic alignment across all core entities, while the analysis of the alignment is further discussed in the following section.
+ %---- 
+ %----NEW---
+ To address this challenge, we propose a bridge aligning selected PREMIS classes with RiC-O entities without modifying either ontology. Unlike merely combining RDF descriptions, the bridge introduces explicit semantic correspondences that enable additional class inferences. For example, the proposed specialization of \texttt{premis:SoftwareAgent} under \texttt{rico:Mechanism} allows preservation software to be inferred as a RiC-O Mechanism.
+ 
+ The alignment is based on comparing class definitions and conceptual scope using three criteria: 
+ (1) \textit{Class Equivalence} (\texttt{owl:equivalentClass}), when both classes represent the same concept, (2) \textit{Domain Specialization} (\texttt{rdfs:subClassOf}), when every instance of a PREMIS class also belongs to a broader RiC-O class, enabling one-way inference, and (3) \textit{Instance-Level Multi-Typing} (\texttt{rdf:type}), for achieving entity reconciliation across structural instances via instance-level multi-typing.
+ Table~\ref{tab:rico-premis-mapping} summarizes the finalized semantic alignment across all core entities, while the analysis of the alignment is further discussed in the following section. The alignment remains at the entity level, while systematic property alignment is left for future work.
+  %---- 
+  %----OLD---
+%It's worthy of note that we also consider the OWL property \texttt{owl:sameAs} to specify instance-level equivalences, enabling the reconciliation of pre-existing, independent entities generated across distinct archival and preservation repositories. This approach ensures long-term extensibility as future iterations of PREMIS or RiC-O evolve.
+  %---- 
+ %----NEW---
+The property \texttt{owl:sameAs} may reconcile independently described resources only when authoritative identifiers or repository mappings establish that both IRIs denote the same individual at the same granularity. Similar filenames or technical characteristics alone do not establish identity.
+  %---- 
 
 \subsection{Detailed Entity Relationship Analysis}
 \label{subsec:detailed-alignment}
@@ -221,37 +244,59 @@ In the previous section, we presented the main entities relationships defined in
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption{Semantic Alignment between RiC-O and PREMIS.}
+	\caption{Semantic Alignment between RiC-O and PREMIS (from PREMIS to RiC-O).}
 	\label{tab:rico-premis-mapping}
 \end{table}
 
-\emph{Intellectual entities and record resources.} An Intellectual Entity, in PREMIS, is typically defined as "a single intellectual unit for purposes of management and description"~\cite{premis_data_dictionary_2015} in a preservation environment; e.g., book, web page, map etc. Such an intellectual entity might be an archival record or a set of records (e.g., an archival file), including also record parts. Therefore, this is the  first entity that motivates an alignment between PREMIS and RiC-O. The RiC-O class that most closely corresponds to this entity is Record Resource, as it covers records, record sets, and record parts. However, a strict class-level assertion, in this case, is deliberately avoided between the PREMIS's Intellectual Entity and RiC-O's  Record Resource, since the semantic scope of the two classes does not fully coincide. For example, an Intellectual Entity may represent a preserved book, or software that is preserved, without necessarily be an archival record in the RiC-O sense. Conversely, when the Intellectual Entity corresponds to a resource that is described as part of a recordkeeping context (e.g., an administrative decision record, a migration log), the same individual can also be typed as a \texttt{rico:RecordResource}. Note that not all \texttt{rico:RecordResource} instances necessarily correspond to PREMIS Intellectual Entities, since some record resources may be described archivally without being managed as preservation-level intellectual units (e.g., a record part represented only for contextual description). Thus, we use an instance-level multi-typing rather than a global subclass relation, allowing only those PREMIS Intellectual Entities that genuinely function as archival record resources to receive both types. For the running example illustrated in Figure~\ref{fig:example}, the archival decision may be represented through the following triples, where the same resource is simultaneously the intellectual object managed for preservation and a record resource carrying archival provenance:
-\begin{rdfexpressions}
-	brg:Infra\_2008\_412 & a & premis:IntellectualEntity, & \\
-	& & rico:RecordResource .
-\end{rdfexpressions}
+\emph{Intellectual entities and record resources.} An Intellectual Entity, in PREMIS, is typically defined as "a single intellectual unit for purposes of management and description"~\cite{premis_data_dictionary_2015} in a preservation environment; e.g., book, web page, map etc. Such an intellectual entity might be an archival record or a set of records (e.g., an archival file), including also record parts. Therefore, this is the  first entity that motivates an alignment between PREMIS and RiC-O. The RiC-O class that most closely corresponds to this entity is Record Resource, as it covers records, record sets, and record parts. 
+%----OLD---
+%However, a strict class-level assertion, in this case, is deliberately avoided between the PREMIS's Intellectual Entity and RiC-O's  Record Resource, since the semantic scope of the two classes does not fully coincide. For example, an Intellectual Entity may represent a preserved book, or software that is preserved, without necessarily be an archival record in the RiC-O sense. Conversely, when the Intellectual Entity corresponds to a resource that is described as part of a recordkeeping context (e.g., an administrative decision record, a migration log), the same individual can also be typed as a \texttt{rico:RecordResource}. Note that not all \texttt{rico:RecordResource} instances necessarily correspond to PREMIS Intellectual Entities, since some record resources may be described archivally without being managed as preservation-level intellectual units (e.g., a record part represented only for contextual description). Thus, we use an instance-level multi-typing rather than a global subclass relation, allowing only those PREMIS Intellectual Entities that genuinely function as archival record resources to receive both types. For the running example illustrated in Figure~\ref{fig:example}, the archival decision may be represented through the following triples, where the same resource is simultaneously the intellectual object managed for preservation and a record resource carrying archival provenance:
+%---- 
+ %----NEW---
+ Since not every PREMIS Intellectual Entity constitutes an archival record, and not every RiC-O Record Resource is managed as a preservation entity, no global class relationship is asserted. For example, an Intellectual Entity may represent a preserved book, or software that is preserved, without necessarily be an archival record in the RiC-O sense. Thus, multi-typing is applied only when repository metadata identifies the preserved intellectual entity as a specific archival record, record set, or record part. For the running example illustrated in Figure~\ref{fig:example}, the administrative decision can receive both types:
+%---- 
+{\footnotesize \begin{rdfexpressions}
+	brg:Infra\_2008\_412 & a & premis:IntellectualEntity, rico:RecordResource .& \\
+%	& & rico:RecordResource .
+\end{rdfexpressions}}
 
 \emph{Representations, files and instantiations.}
 The same approach applies to both 
 PREMIS Representation and File, and RiC-O Instantiation.
-A PREMIS representation represents a "digital or physical object instantiating or embodying an Intellectual Entity"~\cite{premis_data_dictionary_2015}, while the File entity models the "named and ordered sequence of bytes that is known to an operating system"~\cite{premis_data_dictionary_2015}; e.g., a record intellectual entity has a representation given by a sequence of TIFF images, where each image is modeled as an instance of the File class. In RiC-O, to express both representations of a record and a record part (typically, describes each page of the record), we use the Instantiation class, which represents "the inscription of information made by an agent on a carrier in any persistent, recoverable form as a means of communicating information through time and space"~\cite{RiCO,clavaud2021ica}. Similarly to Intellectual Entity and Record Resource, there are cases where a representation or a file instance defined using PREMIS is not an instantiation of a record resource (in essence, this is inherited by the corresponding intellectual entity), and cases where an instantiation instance is not managed within the preservation environment. Therefore, we also use an instance-level multi-typing approach to define instance of both PREMIS and RiC-O classes, according to the case. For example, in Figure~\ref{fig:example}, the instance \texttt{brg:file\_infra\_funding\_docx} of both the File and the Instantiation classes is defined as follows:
-\begin{rdfexpressions}
-	brg:file\_infra\_funding\_docx & a & premis:Representation,& \\
-	& & rico:Instantiation .
-\end{rdfexpressions}
+A PREMIS representation represents a "digital or physical object instantiating or embodying an Intellectual Entity"~\cite{premis_data_dictionary_2015}, while the File entity models the "named and ordered sequence of bytes that is known to an operating system"~\cite{premis_data_dictionary_2015}; e.g., a record intellectual entity has a representation given by a sequence of TIFF images, where each image is modeled as an instance of the File class. In RiC-O, to express both representations of a record and a record part (typically, describes each page of the record), we use the Instantiation class, which represents "the inscription of information made by an agent on a carrier in any persistent, recoverable form as a means of communicating information through time and space"~\cite{RiCO,clavaud2021ica}.
+ %----OLD---
+ Similarly to Intellectual Entity and Record Resource, there are cases where a representation or a file instance defined using PREMIS is not an instantiation of a record resource (in essence, this is inherited by the corresponding intellectual entity), and cases where an instantiation instance is not managed within the preservation environment. Therefore, we also use an instance-level multi-typing approach to define instance of both PREMIS and RiC-O classes, according to the case. 
+ %---- 
+ %----NEW---
+ Here, multi-typing requires evidence that the PREMIS Representation or File embodies a specific archival record or record part. The repository must establish this correspondence and its granularity; auxiliary technical files should not automatically be classified as RiC-O Instantiations. 
+ %---- 
+ For example, in Figure~\ref{fig:example}, the migrated DOCX file satisfies both classifications; i.e., the instance \texttt{brg:file\_infra\_funding\_docx} of both the File and the Instantiation classes is defined as follows:
+{\footnotesize \begin{rdfexpressions}
+	brg:file\_infra\_funding\_docx & a & premis:File, rico:Instantiation .& \\
+%	& & rico:Instantiation .
+\end{rdfexpressions}}
 
 
 \emph{Alignment of activities, actions and events.}
-PREMIS events document actions (e.g., migration, validation, replication, and fixity checking) occurring during the lifecycle, and typically performed by an agent. Looking at RiC-O, the action class typically describes activity types. As a result, we consider it a subclass of the \texttt{rico:ActivityType} class. As for the instances of the PREMIS Event, they typically represent activities performed by Agents; hence, they also describe \texttt{rico:Activity} instances, since in RiC-O an "activity is specifically used to designate purposeful activity of an agent"~\cite{RICCM,RiCO}. One could argue that \texttt{premis:Event} is also a subclass of \texttt{rico:Event} to model events, such system failures. Although this type of events are semantically covered by \texttt{rico:Event} they are not modeled as instances of \texttt{premis:Event}. 
-Continuing the example illustrated in Figure~\ref{fig:example}, the instance \texttt{brg:Migration\_DOCX} of the \texttt{premis:Event} (subclass of \texttt{rico:Activity}) uses the property \texttt{rico:occurredAtDate} to specify the date the migration process ran, and the property \texttt{rico:documents} to describe that the record \texttt{brg:migration\_logs} documents this event:
-\begin{rdfexpressions}
+%----OLD---
+%PREMIS events document actions (e.g., migration, validation, replication, and fixity checking) occurring during the lifecycle, and typically performed by an agent. Looking at RiC-O, the action class typically describes activity types. As a result, we consider it a subclass of the \texttt{rico:ActivityType} class. As for the instances of the PREMIS Event, they typically represent activities performed by Agents; hence, they also describe \texttt{rico:Activity} instances, since in RiC-O an "activity is specifically used to designate purposeful activity of an agent"~\cite{RICCM,RiCO}. One could argue that \texttt{premis:Event} is also a subclass of \texttt{rico:Event} to model events, such system failures. Although this type of events are semantically covered by \texttt{rico:Event} they are not modeled as instances of \texttt{premis:Event}. 
+ %---- 
+%----NEW---
+PREMIS Events represent preservation actions affecting digital objects, such as migration, validation, and fixity checking. The PREMIS ontology already defines \texttt{premis:Event} as a subclass of \texttt{prov:Activity}, reflecting its action-oriented semantics. Similarly, the entity \texttt{rico:Activity} represents purposeful activity performed within a human or organizational context. Consequently, within the proposed framework, PREMIS preservation actions are interpreted as specialized RiC-O Activities, justifying \texttt{premis:Event rdfs:subClassOf rico:Activity}. Although this type of events are semantically covered by \texttt{rico:Event} they are not modeled as instances of \texttt{premis:Event}.
+An unsuccessful preservation action remains an activity regardless of its outcome, whereas independent system failures may require classification as RiC-O Events rather than Activities.
+%Importantly, an unsuccessful preservation action remains an activity, since its outcome does not alter its intentional nature. 
+%%Note here that one could argue that \texttt{premis:Event} is also a subclass of \texttt{rico:Event} to model events, such system failures. 
+%Although this type of events are semantically covered by \texttt{rico:Event} they are not modeled as instances of \texttt{premis:Event}. Unexpected system failures, when modeled as independent occurrences rather than outcomes of preservation actions, may instead require a different classification. Although this type of events are semantically covered by \texttt{rico:Event} they are not modeled as instances of \texttt{premis:Event}. 
+%---- 
+Continuing the example illustrated in Figure~\ref{fig:example}, the instance \texttt{brg:Migration\_DOCX} of the \texttt{premis:Event} (subclass of \texttt{rico:Activity}) uses the property \texttt{rico:occurredAtDate} to specify the date the migration process ran, and the property \texttt{rico:documents} to describe that  \texttt{brg:migration\_logs} (which is a record) documents this event:
+{\footnotesize \begin{rdfexpressions}
 	brg:Migration\_DOCX & a premis:Event ; & \\
 	& rico:occurredAtDate brg:migration\_date . &\\	
-	brg:migration\_logs & a rico:Record ; &\\
-	& rico:documents brg:Migration\_DOCX . & \\
-	brg:migration\_date & a rico:Date ; &\\
-	& rico:normalizedDateValue "2024-09-10" . &
-\end{rdfexpressions}
+	brg:migration\_logs & a rico:Record ; rico:documents brg:Migration\_DOCX .&\\
+%	& rico:documents brg:Migration\_DOCX . & \\
+	brg:migration\_date & a rico:Date ; rico:normalizedDateValue "2024-09-10" . &\\
+%	& rico:normalizedDateValue "2024-09-10" . &
+\end{rdfexpressions}}
 \emph{Alignment of agents.}
 Another area where PREMIS and RiC-O considerably overlap is the representation
 of agents. In PREMIS, an Agent includes as subclasses a person, organization, or software and hardware, which are involved in preservation activities,
@@ -284,9 +329,13 @@ in the archival description of the migration activity.
 
 \emph{Storage media, carrier types and identifiers.}
 The two ontologies also provide concepts for describing the medium in which
-information is stored and the identifiers assigned to entities. RiC-O class \texttt{rico:CarrierType} covers all the storage mediums. Thus, we define \texttt{premis:StorageMedium} as its subclass. Furthermore, the class Identifier is defined in both ontologies and their semantics completely match; therefore, we define an equivalence relationship between them.
-
-
+information is stored and the identifiers assigned to entities. RiC-O class \texttt{rico:CarrierType} covers all the storage mediums. Thus, we define \texttt{premis:StorageMedium} as its subclass. 
+%--OLD--
+%Furthermore, the class Identifier is defined in both ontologies and their semantics completely match; therefore, we define an equivalence relationship between them.
+%---
+%--NEW--
+Both ontologies define identifiers as means of uniquely referencing entities within an information domain. Although PREMIS focuses on preservation repositories and RiC-O covers broader archival contexts, this difference concerns their application rather than the underlying identification concept. We therefore retain \texttt{premis:Identifier owl:equivalentClass rico:Identifier}, allowing identifiers to be interpreted consistently across both models; i.e., bidirectional classification across both models.
+%---
 \emph{Rules, rights bases, and preservation policies.} Analyzing how both ontologies model the rules and mandates, we identify overlaps. In particular, PREMIS provides several classes for expressing the
 normative context under which preservation actions are performed, including
 Rights Basis, Preservation Policy, and Rule. In RiC-O, the broader class \texttt{rico:Rule} is used
@@ -320,19 +369,72 @@ RiC-O class. This does not indicate that these concepts are irrelevant to
 archival description, but rather that no RiC-O entity provides a sufficiently
 close semantic counterpart to justify a class-level alignment. 
 
+%--NEW--
+%\medskip
+%\noindent
+\emph{Cross-ontology querying.}
+To illustrate the practical benefit of the proposed alignment,
+consider the competency question: \emph{Which software migrated
+	a record created by the Ministry of Interior?}
+The following SPARQL query combines archival context (RiC-O)
+with preservation event information (PREMIS and PROV-O). For example, in Figure~\ref{fig:example}, the expected result is
+\texttt{brg:Infra\_2008\_412},
+\texttt{brg:Migration\_DOCX}, and
+\texttt{brg:LibreOffice\_v7.5}.
+The query relies on explicitly asserted relationships,
+whereas the bridge additionally enables inferred classifications,
+such as interpreting a \texttt{premis:SoftwareAgent}
+as a \texttt{rico:Mechanism}.
 
+%In Figure~\ref{fig:example}, the expected result is
+%\texttt{brg:Infra\_2008\_412},
+%\texttt{brg:Migration\_DOCX}, and
+%\texttt{brg:LibreOffice\_v7.5}.
+%The query relies on explicitly asserted relationships,
+%whereas the bridge additionally enables inferred classifications,
+%such as interpreting a \texttt{premis:SoftwareAgent}
+%as a \texttt{rico:Mechanism}.
+
+%{\small
+%	\begin{verbatim}
+%%		PREFIX rico: <https://www.ica.org/standards/RiC/ontology#>
+%%		PREFIX premis: <http://www.loc.gov/premis/rdf/v3/>
+%%		PREFIX prov: <http://www.w3.org/ns/prov#>
+%%		PREFIX owl: <http://www.w3.org/2002/07/owl#>
+%%		PREFIX brg: <https://example.org/bridge/>
+{\footnotesize
+		\begin{verbatim}
+		SELECT DISTINCT ?record ?migration ?software
+		WHERE {  ?record rico:hasCreator brg:Ministry_Interior ;
+			rico:hasOrHadDigitalInstantiation ?inst .
+			?file owl:sameAs ?inst .
+			?migration a premis:Event ; prov:used ?file ;
+			rico:isOrWasPerformedBy ?software .
+			?software a premis:SoftwareAgent . 	}
+	\end{verbatim}
+}
+
+%----
 \section{Conclusion \& Future work}
 \label{sec:conclusion}
-This paper presented a lightweight semantic alignment framework between RiC-O and PREMIS v3 for digital archives. 
-%The two ontologies address complementary aspects of the same information environment.
-%Rather than modifying either source ontology, the proposed bridge defines selected class-level equivalence and specialization relationships and uses instance-level multi-typing where the semantic scopes of the corresponding classes do not fully coincide. 
-This approach preserves the native semantics of both standards while enabling archival description and preservation metadata to coexist within a unified RDF graph.
-%
-The current work mainly addresses semantic integration at the entity level. Future work will focus on extending the bridge to a systematic alignment of RiC-O and PREMIS properties.
-%, including preservation-event relationships, technical characteristics, rights, dependencies, and fixity information. 
-Further work will also include the formal implementation and publication of the bridge ontology
-%, validation through competency questions and reasoning, 
-and evaluation on larger real-world digital archival datasets. Finally, the framework should be examined against future versions of RiC-O and PREMIS.
+%--OLD--
+%This paper presented a lightweight semantic alignment framework between RiC-O and PREMIS v3 for digital archives. 
+%%The two ontologies address complementary aspects of the same information environment.
+%%Rather than modifying either source ontology, the proposed bridge defines selected class-level equivalence and specialization relationships and uses instance-level multi-typing where the semantic scopes of the corresponding classes do not fully coincide. 
+%This approach preserves the native semantics of both standards while enabling archival description and preservation metadata to coexist within a unified RDF graph.
+%%
+%The current work mainly addresses semantic integration at the entity level. Future work will focus on extending the bridge to a systematic alignment of RiC-O and PREMIS properties.
+%%, including preservation-event relationships, technical characteristics, rights, dependencies, and fixity information. 
+%Further work will also include the formal implementation and publication of the bridge ontology
+%%, validation through competency questions and reasoning, 
+%and evaluation on larger real-world digital archival datasets. Finally, the framework should be examined against future versions of RiC-O and PREMIS. 
+%----
+%--NEW--
+This paper proposed a lightweight entity-level alignment between RiC-O and PREMIS v3 for digital archives. Selected class correspondences and conditional multi-typing support the integration of archival context and preservation metadata, as illustrated through a digital archival scenario. The framework remains a proposed alignment rather than a fully implemented and validated bridge ontology. Future work includes systematic property alignment, formal implementation, 
+%consistency checking, 
+and evaluation using real archival datasets.
+Furthermore, formal consistency checking and evaluation of inferred classifications against the combined ontologies remain necessary steps toward a fully implemented bridge ontology.
+%--NEW--
 % in order to assess its maintainability and long-term extensibility.
 % ---- Bibliography ----
 %
